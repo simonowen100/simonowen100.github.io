@@ -8,7 +8,7 @@
 
 /*Containers*/
 .flex-container {
-  width: 1080px;
+  width: 1500px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -20,7 +20,7 @@ h1 {color: white;
   font-family: Pixelify Sans, Bungee, Brush Script MT;
   font-weight: 1;
   font-style: normal;
-  font-size: 32pt;
+  font-size: 42pt;
   text-align: center;
 }
 
@@ -29,7 +29,6 @@ h2 {color: white;
   font-weight: 400;
   font-style: normal;
   font-size: 18pt;
-  text-align: center;
 }
 
 body-copy {
@@ -38,25 +37,22 @@ body-copy {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   color: white;
-  text-align: align;
   font-family: Garamond;
-  font-style: bold;
+  font-weight: bold;
   font-size: 14pt;
-  padding: 0px 15px 25px 0px;
+  padding: 30px;
   
 }
 
 list-style {
   display: flex;
   flex-direction: column;
-  padding: 0px;
   color: white;
-  text-align: left;
   font-family: Garamond;
-  font-style: bold;
+  font-weight: bold;
   font-size: 14pt;
   line-height: 1.6;
-  padding: 50px 0px 0px 25px;
+  padding: 50px 0px 0px 0px;
 }
 
 /*Bars*/
@@ -71,18 +67,19 @@ list-style {
 
 /*Styling*/
 .home-bg {
+  width: 800px;
   display: flex;
   flex-direction: column;
-  flex: 4 1 auto;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
-  margin: 30px;
-  padding: 25px 50px 25px 50px;
+  margin: 30px auto auto auto;
+  padding: 40px 50px 25px 50px;
   border:10px ridge silver; 
   border-radius: 25px;
   justify-content: center;
   align-items: center;
 }
+
 
 /*Styling: Sidebars*/
 .fishbowl{
@@ -93,7 +90,8 @@ list-style {
   background-size: cover;
   border:5px ridge cornflowerblue; 
   border-radius: 25px;
-  margin: 30px 10px 0px 10px;
+  margin: auto;
+  width: 100%; 
 }
 
 .padded-image {
