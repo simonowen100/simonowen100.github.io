@@ -97,6 +97,11 @@ li {
   scale: 3;
 }
 
+body {
+  width: 100%; 
+  height: 100%;
+} 
+
 /*Styling: Sidebars*/
 .fishbowl{
   background-image: url("https://i.pinimg.com/originals/e6/0c/4a/e60c4ae6305c1b5d57e9954166761db9.gif");
