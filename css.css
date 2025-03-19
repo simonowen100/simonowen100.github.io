@@ -57,6 +57,7 @@ list-style {
   font-size: 14pt;
   line-height: 1.6;
   margin-left:25px;
+  z-index:10;
 }
 
 li {
@@ -88,13 +89,14 @@ li {
   align-items: center;
 }
 
-.overlay {
-  position: fixed; 
-  width: 100%;
-  height: 100%;
+.overlay { 
+  max-width: 100%;
+  min-height: 100%;
   z-index: 4;
+  scale: 4;
   text-align: center;
-  scale: 3;
+  position: absolute;
+  object-fit: fill;
 }
 
 body {
