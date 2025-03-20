@@ -52,7 +52,7 @@ body-copy {
   /* 4. Improve text rendering */
   font-smooth: always;
   color: black;
-  font-family: arial;
+  font-family: Bytesized, arial;
   font-size: 10pt;
 }
 
@@ -104,8 +104,7 @@ a:visited: {
 
 .top-menu {
   font-family: Pixelify Sans, Bungee, Brush Script MT;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: bold;
   font-size: 18pt;
   display: flex;
   justify-content: center;
@@ -140,11 +139,11 @@ a:visited: {
 .overlay { 
   width: 100%;
   z-index: 5;
-  scale: 1;
-  position: absolute;
+  position: fixed;
   object-fit: cover;
   text-align: center;
   min-height: 100%;
+  
 }
 
 body {
