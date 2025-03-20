@@ -1,3 +1,8 @@
+/*Troubleshooting*/
+.red {
+  border: px solid red;
+}
+
 /*CSS Reset*/
 *, *::before, *::after {
   box-sizing: border-box;
@@ -22,7 +27,7 @@
   height:100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: space-evenly;
   margin: auto;
   border-radius:25px;
   margin-top:10px;
@@ -69,10 +74,9 @@ list-style {
   font-weight: bold;
   font-size: 14pt;
   line-height: 1.6;
-  margin: 0 25px 0 25px;
-  position: sticky;
   z-index: 10;
   text-align: center;
+  position: sticky;
 }
 
 .img-q-links {
@@ -87,8 +91,10 @@ list-style {
   display: flex;
   height: 100%;
   align-items: center;
-  column-gap: 20px;
+  justify-content: center;
+  column-gap: 50px;
   margin-bottom: 10px;
+  
 }
 
 /*Styling*/
@@ -114,18 +120,18 @@ a:visited: {
   column-gap: 30px;
   background-color: ;
   padding: 10px;
-  width: 40%;
+  width: 100%;
   position: sticky;
   z-index: 10;
   margin: 0px auto;
 }
 
 .home-bg {
-  width: 400px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   z-index: -1;
-  margin: 30px auto auto auto;
+  margin: 0px auto auto auto;
   padding: 25px 40px 25px 40px;
   border-radius: 25px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
