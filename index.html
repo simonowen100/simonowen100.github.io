@@ -263,15 +263,18 @@ body {
   </div>
     
    <section class="top-menu">
-      <form id="noteForm" action="/php.php" method="post">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="note">Note:</label>
-        <textarea id="note" name="note" rows="4" cols="50" required></textarea>
-
-        <button type="submit">Submit Note</button>
-     </form>
+      <h2 style="color:white">Password-Protected Note Manager</h2>
+    <div id="login-section">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="validatePassword()">Login</button>
+    </div>
+    <div id="note-section" style="display:none;">
+        <textarea id="note" placeholder="Write your note here"></textarea>
+        <button onclick="saveNote()">Save Note</button>
+        <p>Saved Note:</p>
+        <div id="saved-note"></div>
+    </div>
+    <script src="script.js"></script>
    </section>
     
  </div>
