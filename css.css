@@ -35,7 +35,7 @@
 
 /*Text Styles*/
 h1 {color: white;
-  font-family: Bungee Outline, Brush Script MT;
+  font-family: Bungee, Brush Script MT;
   font-weight: 700;
   font-style: normal;
   font-size: 46pt;
@@ -132,8 +132,8 @@ a:visited: {
   flex-direction: column;
   z-index: -1;
   margin: 0px auto auto auto;
-  padding: 25px 40px 25px 40px;
-  border-radius: 0px;
+  padding: 25px 40px;
+  border-radius: 5px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -203,3 +203,22 @@ body {
     width:100%;
     text-align: center;
 }
+
+#scroll-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+#scroll-text {
+  transform: translateX(-100%);
+  animation: my-animation 10s linear infinite;
+}
+
+@keyframes my-animation {
+  from 
+  {
+    transform: translateX(-100%);
+  }
+  to { transform: translateX(100%);}
+}
+  
