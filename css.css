@@ -38,7 +38,7 @@ h1 {color: white;
   font-family: Bungee Outline, Brush Script MT;
   font-weight: 700;
   font-style: normal;
-  font-size: 52pt;
+  font-size: 46pt;
   text-align: center;
   padding: 0px 0px 15px 0px;
   }
@@ -92,7 +92,7 @@ list-style {
   height: 100%;
   align-items: center;
   justify-content: center;
-  column-gap: 50px;
+  column-gap: 30px;
   margin-bottom: 10px;
   
 }
@@ -113,8 +113,8 @@ a:visited: {
   font-weight: bold;
   font-size: 18pt;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-content: space-evenly;
   color: white;
   text-align: center;
   column-gap: 30px;
@@ -133,13 +133,12 @@ a:visited: {
   z-index: -1;
   margin: 0px auto auto auto;
   padding: 25px 40px 25px 40px;
-  border-radius: 25px;
+  border-radius: 0px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-size: cover; 
-  border-radius: 25px;
 }
 
 .overlay { 
@@ -188,7 +187,7 @@ body {
   background-position: center;
   background-size: cover;
   border:0px inset orange; 
-  border-radius: 25px;
+  border-radius: 0px;
   margin: auto;
   width: 100%; 
 }
