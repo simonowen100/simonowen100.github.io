@@ -50,6 +50,7 @@ h2 {
   font-style: normal;
   font-size: 18pt;
   text-align:center;
+  z-index:10;
 }
 
 body-copy {
@@ -131,7 +132,6 @@ a:visited: {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  z-index: -1;
   margin: 0px auto auto auto;
   border-radius: 3px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
