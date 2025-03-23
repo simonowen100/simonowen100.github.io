@@ -1,6 +1,6 @@
 /*Troubleshooting*/
 .red {
-  border: 5px solid red;
+  border: 0x solid red;
 }
 
 /*CSS Reset*/
@@ -81,7 +81,7 @@ list-style {
   width: 50px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 4px 4px 0px black;  
+  box-shadow: 4px 4px 0px black;
 }
 
 /*Bars*/
