@@ -90,10 +90,9 @@ list-style {
   height: 100%;
   align-items: center;
   justify-content: center;
-  column-gap: 0px;
+  column-gap: 30px;
   padding: 10px;
   margin: 10px auto;
-  
 }
 
 /*Styling*/
@@ -229,13 +228,10 @@ body {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   border-radius: 15px;
-  padding: 5px 10px px 10px;
-  margin: 10px 10px;
+  padding:5px 10px;
+  margin: 10px;
   background-size: 1800% 1800%;
-  animation: rainbow 5s ease infinite;
-  position: sticky;
-  z-index:0;
-  
+  animation: rainbow 5s ease infinite;  
 }
 
 @keyframes rainbow { 
