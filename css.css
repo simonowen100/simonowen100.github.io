@@ -24,7 +24,6 @@
 
 .flex-container {
   width: 80%;
-  height:100%;
   display: flex;
   margin: auto;
   justify-items: center;
@@ -88,7 +87,6 @@ list-style {
 /*Bars*/
 .bar {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   column-gap: 30px;
