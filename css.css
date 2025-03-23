@@ -73,17 +73,17 @@ list-style {
   font-family: Garamond;
   font-weight: bold;
   font-size: 14pt;
-  line-height: 1.6;
+  line-height: 1.8;
   z-index: 10;
   text-align: center;
   position: sticky;
 }
 
 .img-q-links {
-  max-width: 50px;
+  width: 50px;
   background-color: white;
-  border: 5px ridge cornflowerblue;
   border-radius: 15px;
+  box-shadow: 4px 4px 0px black;  
 }
 
 /*Bars*/
@@ -133,12 +133,12 @@ a:visited: {
   z-index: -1;
   margin: 0px auto auto auto;
   padding: 25px 40px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
 }
 
 .overlay { 
@@ -185,11 +185,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
-  background-size: cover;
-  border:0px inset orange; 
-  border-radius: 0px;
-  margin: auto;
-  width: 100%; 
+  background-size: cover; 
+  border-radius: 3px;
 }
 
 .padded-image {
@@ -221,4 +218,46 @@ body {
   }
   to { transform: translateX(100%);}
 }
-  
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.pulse:hover {
+  transform: scale(1.5);
+  transition: transform 250ms;
+}
+
+.wrapper { 
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  border-radius: 15px;
+  padding: 5px 10px 0px 10px;
+  background-size: 1800% 1800%;
+  animation: rainbow 5s ease infinite;
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.r2 {
+  z-index: 10;
+}
+
+.r2:hover {
+  transform: scale(2);
+  transition: transform 250ms;
+}
+
+.chain {
+ width: 100%;
+ text-align:center;
+  display: block;
+  margin: auto;
+  transform: rotate(0deg);
+}

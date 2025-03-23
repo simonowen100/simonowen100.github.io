@@ -180,8 +180,7 @@ function set_scroll() {
 <link rel="stylesheet" href="css.css">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
  <audio src="Yume Utsutsu.mp3" autoplay> </audio>
- 
-
+<meta charset="UTF-8"> 
     
 </head>
 
@@ -191,6 +190,9 @@ body {
   cursor: url("diamond-sword.cur"), default;
 }
 </style> 
+<style type="text/css">
+body {cursor: url(http://www.rw-designer.com/cursor-extern.php?id=194222);}
+</style>
 
 <style>  
 .html {
@@ -208,20 +210,18 @@ body {
   <img class="overlay" src="https://64.media.tumblr.com/7829711748f566733aaaa2bcf4146617/tumblr_mqthpvk8y81s5jjtzo1_500.gif">
    <br><br><br><br>  
   
-  <section style='position: relative; right:200px; text-align:center'> <img src="https://web.archive.org/web/20090901163634/http://geocities.com/just_plain_pavek/StarWars/images/r2move.gif"> </section>
+  <section style='position: relative; right:200px; text-align:center' class="r2"> <img src="https://web.archive.org/web/20090901163634/http://geocities.com/just_plain_pavek/StarWars/images/r2move.gif"> </section>
   
- <section style="text-align:center;"> <h1> Simon Owen's Landing </h1> 
+ <section style="text-shadow: 0px +4px cornflowerblue; text-align:center;"> <h1> Simon Owen's Landing </h1> 
   </section> 
   
   <div style="display:flex; text-align: center" class='top-menu'>
-  <section> 
-      <a href=""target="_blank"> About </a> </section>
-    <section> 
-      <a href=""target="_blank"> Links </a> </section>
-   <section> <a href=""target="_blank"> Asset Log </a> </section>
-   <section style> <a href=""target="_blank"> Cantina </a> 
-    </section>
-   <section> <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"> Guestbook </a> </section>
+      <a href=""target="_blank"> Home </a>
+      <a href=""target="_blank"> About </a>
+      <a href="https://simonowen.au/links/"target="_blank"> Links </a> 
+  <a href=""target="_blank"> Asset Log </a> 
+   <a href=""target="_blank"> Cantina </a> 
+ <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"> Guestbook </a>
  </div>
   
 <div class="flex-container">
@@ -243,15 +243,19 @@ body {
   
 <!--2-->
   <div class="red" style="max-width: 100px; flex:1; flex-wrap:wrap; margin: 0px 15px;">
-     <section style= "display: block; padding:5px 0px; z-index=10" class="concrete">
+     <section style= "padding:5px 0px 15px 0px; z-index=10;" class="concrete">
       
-       <h2 style="color:black; padding:15px"> Quick Links </h2>
+      
+          <section class='bar' style=' padding: 15px 15px 0px 15px;'>
+       <h2 style="color:white" class="wrapper"> Quick Links  &#8595 &#8595</h2> 
+      </section>
+  
         <list-style>
-          <a title="view PDF portfolio" href="https://filestore.community.support.microsoft.com/api/images/2f12ab59-a2a9-4f40-847f-76dc75093468?upload=true"> <img class="img-q-links" src="https://cdn-icons-png.flaticon.com/512/4100/4100416.png"> </a>
-          <a title="shoot me an email" href="mailto:simonowen100@gmail.com"> <img class="img-q-links" src="https://cdn-icons-png.freepik.com/512/12751/12751325.png" </a>     
-          <a title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img class="img-q-links" src="https://64.media.tumblr.com/a013dd5e98b0558ece4f5b475b642d48/tumblr_nrfmy1U9Th1uathmoo1_640.png"> </a> 
-          <a title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img class="img-q-links" src="https://images.icon-icons.com/2873/PNG/512/linkedin_pixel_logo_icon_181925.png"></a> 
-          <a title="view my Flickr" href="https://www.flickr.com/photos/195084601@N05/"><img class="img-q-links" src="https://web.archive.org/web/20091019233532/http://es.geocities.com/radioallariz/archivosradio/allariz/wwwallarizcom/camera.gif"></a>            
+          <a class='pulse'; title="view PDF portfolio" href="https://filestore.community.support.microsoft.com/api/images/2f12ab59-a2a9-4f40-847f-76dc75093468?upload=true"> <img style="padding: 4px" class="img-q-links" src="https://cdn-icons-png.flaticon.com/512/4100/4100416.png"> </a>
+          <a class='pulse' title="shoot me an email" href="mailto:simonowen100@gmail.com"> <img style="padding: 3px" class="img-q-links" src="https://cdn-icons-png.freepik.com/512/12751/12751325.png" </a>     
+          <a class='pulse' title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img class="img-q-links" src="https://64.media.tumblr.com/a013dd5e98b0558ece4f5b475b642d48/tumblr_nrfmy1U9Th1uathmoo1_640.png"> </a> 
+          <a class='pulse' title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img class="img-q-links" src="https://images.icon-icons.com/2873/PNG/512/linkedin_pixel_logo_icon_181925.png"></a> 
+          <a class='pulse' title="view my Flickr" href="https://www.flickr.com/photos/195084601@N05/"><img class="img-q-links" src="https://web.archive.org/web/20091019233532/http://es.geocities.com/radioallariz/archivosradio/allariz/wwwallarizcom/camera.gif"></a>            
         </list-style>
     </section>
     
@@ -262,28 +266,37 @@ body {
   </div>
   
 <!--3-->
-  <div class="red" style="display:flex">
+  <div style="display:flex; flex:1; flex-wrap:wrap; align-content: flex-start" class="red">
     <div class="home-bg">
         
              <div id="scroll-container"><div id="scroll-text"> <img src="https://web.archive.org/web/20091027035606/http://es.geocities.com/melgarbeatles6/barraconstruction.gif">
                </div>
       </div>
                   
-          <section class="bar">
-            
+          <section class="bar"> 
           <img style="margin: 0px auto; padding:auto; width: 100px" src="https://www.cameronsworld.net/img/content/22/left-side/12.gif">   
-          <h2 >Welcome, W.I.P.</h2>
+          <h2>Welcome, W.I.P.</h2>
           <img style="margin: auto; width:100px; scale:1" src="https://web.archive.org/web/20091027034435/http://www.geocities.com/seimomoney/starwars/r2d22001.gif">
-    
         </section>
  
         <section class="bar">
           <body-copy> Hi, my name's Simon Owen and I'm a graphic designer, writer, and photographer based in Melbourne, Australia. </body-copy>
         </section> 
   </div>
-
- </div>
-     
+<!--second section of 3-->                            
+<section class='concrete' style="width: 600px; display: block; margin:15px auto; padding:30px;"> 
+  <h2> What you can do on this site: </h2>
+  <br>
+  <li> Visit Quick Links (hover to view description)
+    <li> Visit different pages on the site (top menu bar)
+    <li style='margin-left:30px'> Read About Me (my profile)
+      <li style='margin-left:30px'> View links (to friend's pages, etc)
+        <li style='margin-left:30px'> Asset Log (all assets cited)
+          <li style='margin-left:30px'> Cantina (hangout with my gifs and music)
+            <li style='margin-left:30px'> Guestbook (leave a message)
+    </section>
+  </div>
+                            
 <!--4--> 
     <div class="red" style="max-width: 100px; flex: 1; margin: 0 15px">
       <section style="width: 100px; display: block; margin-top: 30px; margin-left:10px; padding-bottom:30px; z-index=10">
