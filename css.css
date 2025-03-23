@@ -75,9 +75,7 @@ list-style {
   font-weight: bold;
   font-size: 14pt;
   line-height: 1.8;
-  z-index: 10;
   text-align: center;
-  position: sticky;
 }
 
 .img-q-links {
@@ -132,6 +130,7 @@ a:visited: {
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  z-index: -1;
   margin: 0px auto auto auto;
   border-radius: 3px;
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f8759060064327.5a3a5a50d6a57.jpg");
@@ -234,6 +233,8 @@ background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
   padding: 5px 10px 0px 10px;
   background-size: 1800% 1800%;
   animation: rainbow 5s ease infinite;
+  position: sticky;
+  z-index:0;
 }
 
 @keyframes rainbow { 
