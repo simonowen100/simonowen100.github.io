@@ -1,6 +1,6 @@
 /*Troubleshooting*/
 .red {
-  border: 0x solid red;
+  border: 0px solid red;
 }
 
 /*CSS Reset*/
@@ -57,7 +57,7 @@ body-copy {
   font-smooth: always;
   color: black;
   font-family: Pixelify Sans, Bungee, Brush Script MT;
-  font-size: 12pt;
+  font-size: 14pt;
   margin: 0px 30px 30px 30px;
 }
 
@@ -89,9 +89,9 @@ list-style {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 30px;
-  padding: 10px;
-  margin: 10px auto;
+  column-gap: 0px;
+  padding: 0px;
+  margin: 0px auto;
 }
 
 /*Styling*/
@@ -182,10 +182,6 @@ body {
   max-width:600px;
 }
 
-.padded-image {
-  padding: 15px;
-}
-
 .footer { 
     position: absolute; 
     bottom: 0; 
@@ -202,7 +198,9 @@ body {
 #scroll-text {
   transform: translateX(-100%);
   animation: my-animation 10s linear infinite;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  scale:1.5;
 }
 
 @keyframes my-animation {
