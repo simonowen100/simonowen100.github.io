@@ -120,6 +120,27 @@ a:visited: {
   margin: 0px auto;
 }
 
+.second-menu {
+  font-family: Pacifico, Brush Script MT, Pixelify Sans, Bungee;
+  font-size: 15pt;
+  display: flex;
+  align-items: top;
+  align-content: center;
+  justify-content: center;
+  justify-tems: center;
+  text-align: center;
+  column-gap: 25px;
+  padding-top: 50px;
+  padding: 10px;
+  width: 60%;
+  position: sticky;
+  margin: auto;
+  margin-top:15px;
+background-color: #1D8974;
+  border-radius: 15px 15px 0px 0px;
+  border: 5px solid white;
+}
+
 .home-bg {
   max-width: 600px;
   display: flex;
