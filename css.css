@@ -34,7 +34,7 @@
 
 /*Text Styles*/
 h1 {color: white;
-  font-family: Bungee, Brush Script MT;
+  font-family: Michroma, Bungee, Brush Script MT;
   font-weight: 700;
   font-style: normal;
   font-size: 46pt;
@@ -58,7 +58,7 @@ body-copy {
   color: black;
   font-family: Pixelify Sans, Bungee, Brush Script MT;
   font-size: 14pt;
-  margin: 0px 30px 30px 30px;
+  margin: 15px 30px 20px 30px;
 }
 
 list-style {
@@ -174,7 +174,7 @@ body {
   background-position: center;
   background-size: cover;
   border:0px ridge orange; 
-  border-radius: 25px;
+  border-radius: 15px;
   width: 100%; 
   display:block;
   margin:0px auto;
@@ -195,7 +195,7 @@ body {
   background-attachment: scroll;
   background-position: center;
   background-size: cover; 
-  border-radius: 3px;
+  border-radius: 15px;
   max-width:600px;
 }
 

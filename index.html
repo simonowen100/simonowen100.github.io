@@ -30,7 +30,7 @@
 body {
   background-image: url(https://i.imgur.com/h2rp0Ts.png);
   background-size: cover;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   }
@@ -46,11 +46,11 @@ body {
   }
     
   .button {
-  background-color: rgba(18, 90, 77, 0.5);
+  background-color: #FEFEFE;
   background-size: auto;
   border-radius:100px;
   border: 2px solid white;
-  color: white;
+  color: black;
   padding: 15px;
   text-align: center;
   text-decoration: none;
@@ -82,7 +82,8 @@ background: linear-gradient(124deg, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8,
 }  
   
 .button:hover {
-  background-color: #49795E;
+  background-color: #1D8974;
+  color: white;
 }  
   
 h2 {
@@ -112,6 +113,33 @@ h2 {
     color: white;
     font-size: 16pt;
   }
+  
+   .pulse:hover {
+  transform: scale(1.2);
+  transition: transform 250ms;
+}
+  
+  .img-q-links {
+  width: 40px;
+}
+  
+  list-style {
+  display: flex;
+  flex-direction: ;
+  align-content: space-between;
+  color: black;
+  font-family: Garamond;
+  font-weight: bold;
+  font-size: 14pt;
+  line-height: 1.8;
+  text-align: center;
+  column-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  padding-top: 50px;
+}
   
 .page-bg-container {
   text-align: center;
@@ -173,6 +201,7 @@ a:visited: {
 
   
 <!--2-->
+ <br><br><br> <br><br><br> 
   <div style='display:flex'class="red flex-container">                          
      
              <heading> 
@@ -182,18 +211,27 @@ a:visited: {
     
       <subline> 
      <div style='position:display:flex; margin:auto; padding:25px;'>
-    Communication designer and writer based in Melbourne
+    Melbourne (Naarm)-based communication designer and writer
                </div> </subline>
                <br><br>
    <h3> 
-     <div class='button button:hover'>
-     Download PDF portfolio
-     </div>
+     <a target='_blank' href=simon's-portfolio> <div class='button button:hover'>
+     View PDF portfolio
+                                                                </div> </a>
       <br>
      <a href=home> <div class='button rainbow'>
-       Enter my personal site
+       Enter personal site
        </div> </a>
     </h3>
+    
+      <list-style>
+          <a target="_blank" class='pulse' title="shoot me an email"  href="mailto:simonowen100@gmail.com"> <img style="padding: 3px" class="img-q-links" src="https://i.imgur.com/CaRgbYq.png"> </a>     
+          <a target="_blank" class='pulse' title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img class="img-q-links" src="https://img.icons8.com/ios11/512/FFFFFF/instagram-new.png"> </a> 
+          <a target="_blank" class='pulse' title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img class="img-q-links" src="https://img.icons8.com/m_sharp/512/FFFFFF/linkedin--v2.png"></a> 
+          <a target="_blank" class='pulse' title="view my Flickr" href="https://www.flickr.com/photos/195084601@N05/"><img style='padding-bottom:4px' class="img-q-links" src="https://www.pngkey.com/png/full/207-2070914_flickr-logo-flickr-logo-white-vector.png"></a>      
+             <a target="_blank" class='pulse' title="visit YouTube channel" href="https://www.youtube.com/@simon2322"><img class="img-q-links" style="padding: 4px; align: center;" src="https://freepnglogo.com/images/all_img/1701510949youtube-logo-png-white.png"></a>
+        </list-style>
+    </section>
     
     </div> 
 
