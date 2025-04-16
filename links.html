@@ -1,161 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <script type="text/javascript">
-// <![CDATA[
-var sparks=200; // how many sparks per clicksplosion
-var speed=33; // how fast - smaller is faster
-var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
-var colours=new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c'); 
-//                     blue    red     green   purple  cyan    orange  pink
-
-/****************************
-*   Clicksplosion Effect    *
-*(c)2012-3 mf2fm web-design *
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var intensity=new Array();
-var Xpos=new Array();
-var Ypos=new Array();
-var dX=new Array();
-var dY=new Array();
-var stars=new Array();
-var decay=new Array();
-var timers=new Array();
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var count=0;
-
-function addLoadEvent(funky) {
-  var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
-    if (oldonload) oldonload();
-    funky();
-  }
-}
-
-addLoadEvent(clicksplode);
-
-function clicksplode() { if (document.getElementById) {
-  var i, j;
-  window.onscroll=set_scroll;
-  window.onresize=set_width;
-  document.onclick=eksplode;
-  set_width();
-  set_scroll();
-  for (i=0; i<bangs; i++) for (j=sparks*i; j<sparks+sparks*i; j++) {
-    stars[j]=createDiv('*', 13);
-    document.body.appendChild(stars[j]);
-  }
-}}
-
-function createDiv(char, size) {
-  var div, sty;
-  div=document.createElement('div');
-  sty=div.style;
-  sty.font=size+'px monospace';
-  sty.position='absolute';
-  sty.backgroundColor='transparent';
-  sty.visibility='hidden';
-  sty.zIndex='101';
-  div.appendChild(document.createTextNode(char));
-  return (div);
-}
-
-function bang(N) {
-  var i, Z, A=0;
-  for (i=sparks*N; i<sparks*(N+1); i++) { 
-    if (decay[i]) {
-      Z=stars[i].style;
-      Xpos[i]+=dX[i];
-      Ypos[i]+=(dY[i]+=1.25/intensity[N]);
-      if (Xpos[i]>=swide || Xpos[i]<0 || Ypos[i]>=shigh+sdown || Ypos[i]<0) decay[i]=1;
-	  else {
-        Z.left=Xpos[i]+'px';
-        Z.top=Ypos[i]+'px';
-	  }
-      if (decay[i]==15) Z.fontSize='7px';
-      else if (decay[i]==7) Z.fontSize='2px';
-      else if (decay[i]==1) Z.visibility='hidden';
-	  decay[i]--;
-	}
-	else A++;
-  }
-  if (A!=sparks) timers[N]=setTimeout('bang('+N+')', speed);
-}
-
-function eksplode(e) { 
-  var x, y, i, M, Z, N;
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-  N=++count%bangs;
-  M=Math.floor(Math.random()*3*colours.length);
-  intensity[N]=5+Math.random()*4;
-  for (i=N*sparks; i<(N+1)*sparks; i++) {
-    Xpos[i]=x;
-    Ypos[i]=y-5;
-    dY[i]=(Math.random()-0.5)*intensity[N];
-    dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
-    decay[i]=16+Math.floor(Math.random()*16);
-    Z=stars[i].style;
-    if (M<colours.length) Z.color=colours[i%2?count%colours.length:M];
-    else if (M<2*colours.length) Z.color=colours[count%colours.length];
-    else Z.color=colours[i%colours.length];
-    Z.fontSize='13px';
-    Z.visibility='visible';
-  }
-  clearTimeout(timers[N]);
-  bang(N);
-} 
-
-function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
-  if (document.documentElement && document.documentElement.clientWidth) {
-    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-  }
-  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-  }
-  if (document.body.clientWidth) {
-    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-  }
-  if (sw_min==999999 || sh_min==999999) {
-    sw_min=800;
-    sh_min=600;
-  }
-  swide=sw_min-7;
-  shigh=sh_min-7;
-}
-
-function set_scroll() {
-  if (typeof(self.pageYOffset)=='number') {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-    sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-// ]]>
-</script>
-
+  
 <!--Fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,7 +16,9 @@ function set_scroll() {
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css.css">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
@@ -181,7 +29,7 @@ function set_scroll() {
 <!--Cursor & HTML props-->
 <style>
 body {
-  cursor: url("diamond-sword.cur"), default;
+  cursor: url(""), default;
 }
 </style> 
 
@@ -200,16 +48,15 @@ body {
   <img class="page-bg-container" src="https://img.itch.zone/aW1hZ2UvMTY1NDczNS85NzM1Nzg1LmdpZg==/original/LK07lW.gif">
   
    <br><br><br><br>  
+ 
   
-  <section style='position: relative; right:200px; text-align:center' class="r2"> <img src="https://web.archive.org/web/20090901163634/http://geocities.com/just_plain_pavek/StarWars/images/r2move.gif"> </section>
-  
- <section style="text-shadow: 0px +4px cornflowerblue; text-align:center;"> <h1> Simon Owen</h1> 
+<section style="margin-top: 32px; text-align:center;"> <h1> SIMON OWEN</h1> 
   </section> 
   
   <div style="display:flex; text-align: center" class='top-menu'>
-      <a href=homepage> Home </a>
-      <a href=""target="_blank"> About </a>
-      <a  style="scale:1.2; text-decoration: underline" href="links.html"> Links </a> 
+      <a href=home> Home </a>
+      <a href="about" target="_blank"> About </a>
+      <a style="scale:1.2; text-decoration: underline" href="links"> Links </a> 
   <a href=""> Asset Log </a> 
    <a href=""> Cantina </a> 
  <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"> Guestbook </a>
@@ -218,23 +65,6 @@ body {
 <div class="flex-container">
   
 <!--1-->
-  <div class="red" style="max-width: 100px;  margin: 0px 30px 0px 15px;">
-     <section class="concrete" style= "padding:5px 0px 15px 0px; z-index=10;">
-      
-           <section class='bar wrapper' style='padding: 15px 15px 0px 15px;'>
-       <h2 style="color:white"> Quick Links  &#8595 &#8595</h2> 
-      </section>
-  
-        <list-style>
-          <a class='pulse'; title="view PDF portfolio" href="https://filestore.community.support.microsoft.com/api/images/2f12ab59-a2a9-4f40-847f-76dc75093468?upload=true"> <img style="padding: 4px" class="img-q-links" src="https://cdn-icons-png.flaticon.com/512/4100/4100416.png"> </a>
-          <a class='pulse' title="shoot me an email" href="mailto:simonowen100@gmail.com"> <img style="padding: 3px" class="img-q-links" src="https://cdn-icons-png.freepik.com/512/12751/12751325.png" </a>     
-          <a class='pulse' title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img class="img-q-links" src="https://64.media.tumblr.com/a013dd5e98b0558ece4f5b475b642d48/tumblr_nrfmy1U9Th1uathmoo1_640.png"> </a> 
-          <a class='pulse' title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img class="img-q-links" src="https://images.icon-icons.com/2873/PNG/512/linkedin_pixel_logo_icon_181925.png"></a> 
-          <a class='pulse' title="view my Flickr" href="https://www.flickr.com/photos/195084601@N05/"><img class="img-q-links" src="https://i.imgur.com/ueBnHIx.png"></a>            
-        </list-style>
-    </section>
-   
-  </div>
   
 <!--2-->
   <div class="red">                          
