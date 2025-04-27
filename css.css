@@ -123,19 +123,10 @@ a:visited: {
 .second-menu {
   font-family: Pacifico, Brush Script MT, Pixelify Sans, Bungee;
   font-size: 15pt;
-  display: flex;
-  flex-direction: column;
-  align-items: top;
-  justify-content: top;
   text-align: right;
-  column-gap: 50px;
-  row-gap: 25px;
-  padding: 15px;
-  width: auto;
-  margin-right:10px;
-background-color: #1D8974;
-  border-radius: 15px 15px 0px 0px;
-  border: 0px solid white;
+  margin: 10px;
+  padding: 5px;
+  text-wrap: nowrap;
 }
 
 .home-bg {
