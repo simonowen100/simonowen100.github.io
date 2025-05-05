@@ -124,9 +124,11 @@ a:visited: {
   font-family: Pacifico, Brush Script MT, Pixelify Sans, Bungee;
   font-size: 15pt;
   text-align: right;
-  margin: 10px;
-  padding: 5px;
+  margin: 0px;
+  padding: 10px 20px;
   text-wrap: nowrap;
+  outline: 1px dashed black;
+  border-radius: 15px;
 }
 
 .home-bg {

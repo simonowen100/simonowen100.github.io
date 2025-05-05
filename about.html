@@ -68,6 +68,33 @@ body {
     line-height:1.5;
   }
   
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FEFEFE;
+  z-index: 1;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {}
+
+   .top-menu-image {
+    width:30px;
+    position: sticky;
+    right:100%;
+  }
+  
 </style>
   
 <!--START OF CODE--> 
@@ -77,17 +104,30 @@ body {
    <br><br><br><br>  
   
   
- <section style="margin-top: 32px; text-align:center;"> <h1> SIMON OWEN</h1> 
+ <section style="text-align: center; margin-top: 32px;"> <img style='width: 600px' src='https://i.imgur.com/5Q3FYjU.png'> 
   </section> 
+  <br>
   
   <div style="display:flex; text-align: center" class='top-menu'>
-      <a href="home"> Home </a>
-      <a style="scale:1.2; text-decoration: underline" href="about"> About </a>
+      <a href=home> Home </a>
+      <a style='text-decoration: underline; font-size: 20pt' href="about"> About </a>
       <a href="links"> Links </a> 
-    <a href="favs"> Favs </a>
+   <div class="dropdown">
+      <a href="none">Blog</a>
+  <div style='text-align: left;font-family: Pixelify Sans; font-size: 16pt' class="dropdown-content">
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020141126/http://geocities.com/HotSprings/Spa/2934/taoanim.gif'> Taoisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090820040827if_/http://www.geocities.com/musicscrapbook/rotatingJewstar.gif'> Judaisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020084047/http://www.geocities.com/pjadams49417/popcorneat.gif'> Snacks</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091027072429if_/http://geocities.com/portfolio23015/rotating_Earth.gif'> Travel</a>
+  </div>
+     </div> </a>
   <a style='color:grey; text-decoration: line-through;' href=""> Asset Log </a> 
-   <a style='color:grey; text-decoration: line-through;' ref=""> Cantina </a> 
- <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5" target="_blank"> Guestbook </a>
+   <a style='color:grey; text-decoration: line-through;' href=""> Lounge </a> 
+ <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"> Guestbook </a>
  </div>
   
 <div class="flex-container">
