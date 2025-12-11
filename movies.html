@@ -152,8 +152,10 @@ body {
   background-color: #FEFEFE;
   border: 0px solid red;
   min-width: 200px;
-  transition: flex-basis 0.5s ease-in-out, max-width 0.5s ease-in-out;
+ 
   overflow:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }  
   
 /* Styling the details elements */
@@ -177,6 +179,10 @@ body {
     max-width: 200px;
   height:auto;
 }
+  
+  .column::-webkit-scrollbar {
+  display: none;
+  }
   
   summary {
     background-color: #bbbbbb;
@@ -232,6 +238,14 @@ body {
     display: block;
   }
   
+  @font-face {
+  font-family: 'Fusion Pixel 10px Proportional JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
+} 
+  
 </style>
   
 <!--START OF CODE--> 
@@ -243,14 +257,14 @@ body {
  <section style="text-align: center; margin-top: 32px;"> <img style='width: 600px' src='https://i.imgur.com/5Q3FYjU.png'> 
   </section> 
   <br>
-  <div style="display:flex; text-align: center" class='top-menu'>
-      <a href=home> Home </a>
-      <a href="about"> About </a>
-      <a href="links"> Links </a> 
-   <div class="dropdown">
-      <a style='text-decoration: underline; font-size: 20pt' href="none">Blog</a>
-  <div style='text-align: left;font-family: Pixelify Sans; font-size: 16pt' class="dropdown-content">
-    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
+  <div style="display:flex; text-align: center;" class='top-menu'>
+      <a class='top-button' href=home> Home </a>
+      <a href="about" class='top-button'> About </a>
+      <a href="links"  class='top-button'> Links </a>
+   <div  class="dropdown top-button">
+      <a href="none" style='color:blue'> Blog </a>
+  <div class="dropdown-content">
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="updates"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
     <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
@@ -260,16 +274,16 @@ body {
      <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091027072429if_/http://geocities.com/portfolio23015/rotating_Earth.gif'> Travel</a>
   </div>
      </div> </a>
-  <a style='color:grey; text-decoration: line-through;' href=""> Asset Log </a> 
-   <a style='color:grey; text-decoration: line-through;' href=""> Lounge </a> 
- <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"> Guestbook </a>
+  <a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Asset Log </a> 
+   <a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Lounge </a> 
+ <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"  class='top-button'> Guestbook </a>
  </div>
 
   
    <div class='big-container'>
- <div style='padding: 0px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; background-color: white; margin: auto;'>
+ <div style='padding: 8px 20px 15px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; background-color: white; margin: auto;'>
    <span><p class='box-header'>My Favourite Movies of All Time</p><p class='box-subheader'> Leave a message on my guestbook telling me your favourite movie! </p></span>
-   <span><img style='height: 125px' src='https://web.archive.org/web/20010626032547/http://www.geocities.com:80/Colosseum/Track/2407/popcorn.gif'></span>
+   <span><img style='height: 80px' src='https://i.imgur.com/s912W0d.gif'></span>
    <span> <img style='height:60px' src='https://web.archive.org/web/20090829203505/http://geocities.com/~perkinshome/images/mppopcorn.gif'>
    </span>
    </p>
@@ -350,7 +364,7 @@ body {
    
 <!--5-->
      <div style='display: flex;' class='column'>
-  <img class='poster' src='https://m.media-amazon.com/images/M/MV5BMzMzNmViNjYtN2ViNi00NDM3LWFlMmItNDYyMGIzY2EzZjE2XkEyXkFqcGc@._V1_.jpg'>
+  <img class='poster' src='https://i.imgur.com/0sIMsY4.jpeg'>
      <div>
     <p class='box-header'>Once Upon a Time in Hollywood</p> 
        <p class='box-subheader'> Quentin Tarantino <br>2019</p><span class="dashed"> </span></div>
@@ -364,7 +378,7 @@ body {
     
     <!--6-->
     <div style='display: flex;' class='column'>
-  <img style='object-position: 100% 30%;' class='poster' src='https://cdn.posteritati.com/posters/000/000/063/944/fiddler-on-the-roof-md-web.jpg'>
+  <img style='object-position: 100% 30%;' class='poster' src='https://i.imgur.com/qKN0f2f.jpeg'>
     <div> 
     <p class='box-header'>Fiddler on the Roof</p> 
       <p class='box-subheader'> Norman Jewison <br>1971</p><span class="dashed"> </span></div>
