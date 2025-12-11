@@ -94,6 +94,7 @@ list-style {
 a {
   color: white;
   text-decoration: none;
+  
 }
 a:hover {
   color: cornflowerblue;
@@ -104,20 +105,36 @@ a:visited: {
 
 .top-menu {
   font-family: Pixelify Sans, Bungee, Brush Script MT;
-  font-weight: bold;
-  font-size: 18pt;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
   column-gap: 50px;
-  background-color: ;
-  padding: 10px;
+  padding: 0px;
   width: 100%;
   position: sticky;
   z-index: 10;
-  margin: 0px auto;
+  margin: 0px 0px;
+}
+
+
+.top-button {
+  color: blue;
+  font-family: 'Fusion Pixel 10px Proportional JP';
+  font-weight: regular;
+  background-color: #eeeeee;
+  border: 4px outset #cccccc;
+  border-top: 1px outset #cccccc;
+  border-bottom: 6px outset #bbbbbb;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 25px 0px;
+  cursor: pointer;
+  font-size: 10pt;
+}
+
+.top-button:hover {
+       transform: scale(1.2)}
 }
 
 .second-menu {
@@ -168,6 +185,19 @@ body {
   width: 100%; 
   display:block;
   margin:0px auto;
+   transition: transform 0.8s ease-in-out;
+}
+
+.fishbowl:hover {
+  transform: scale(4)
+}
+
+.enlarge:hover {
+  transform: scale(4)
+}
+
+.enlarge {
+  transition: transform 0.3s ease-in-out
 }
 
 .fishbowl2 {
@@ -246,7 +276,7 @@ background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
 }
 
 .r2 {
-  z-index: 10;
+  z-index: 100;
 }
 
 .r2:hover {
@@ -261,3 +291,13 @@ background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
   margin: auto;
   transform: rotate(0deg);
 }
+
+body {
+    background-color: blue;
+    font: normal 1em / 1.5em BlinkMacSystemFont, -apple-system, 'Segoe UI', roboto, helvetica, arial, sans-serif;
+ }
+
+audio {
+    display:block;
+    margin: auto;
+ }
