@@ -234,7 +234,14 @@ body {
 <div>
     <button style='font-family: courier' onclick="document.getElementById('player').play()">Play</button>
     <button onclick="document.getElementById('player').pause()">Pause</button>
-    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button><br><br>
+    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
+<span id="currentTime">0:00</span>
+  <div class="progress-bar-container">
+    <input type="range" id="progressBar" min="0" max="100" value="0" step="0.1">
+  </div>
+  <span id="duration">0:00</span>
+    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+  <br><br>
 </div>
             <img style='max-width:100px' src='https://m.media-amazon.com/images/M/MV5BNjAwN2M2MjAtZDk2MS00MDQ2LTkxZWYtNTUyNTQ0YWI2NGJiXkEyXkFqcGc@._V1_.jpg'>
            </div>
@@ -267,3 +274,4 @@ body {
                                                                
   </body>                                                                  
 </html>
+
