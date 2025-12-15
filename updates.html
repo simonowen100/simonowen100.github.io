@@ -13,15 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-  
 <link rel="stylesheet" href="css.css">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
+ <audio src="" autoplay> </audio>
 <meta charset="UTF-8"> 
     
 </head>
@@ -76,7 +74,7 @@ body {
   }
   
   .box {
-    display: flex; gap:60px; font-family: courier; color:#00FF41; padding: 40px 85px 0px 85px; max-width: 800px; background-color: #0C0C0C; border: 1px solid #00FF41;
+   font-family: courier; color:#00FF41; padding: 40px; max-width: 800px; background-color: #0C0C0C; border: 1px solid #00FF41;
   }
   
   @font-face {
@@ -86,6 +84,21 @@ body {
   font-weight: 400;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
 } 
+  
+  .image {
+    margin:20px; width:100%;
+  }
+  
+  .image:hover {
+    scale: ;
+    
+  }
+  
+  .caption {
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+  }
   
 </style>
   
@@ -108,7 +121,7 @@ body {
    <div  class="dropdown top-button">
       <a href="none" style='color:blue'> Blog </a>
   <div class="dropdown-content">
-    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="updates"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
     <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
@@ -124,31 +137,69 @@ body {
  </div>
   
   <div class='flex-container'>
-  <!--1-->
+  <!--Header-->
   <div> 
-    <div style='font-family: courier; display: flex; gap:30px; color:#00FF41; padding: 10px 0px 10px 85px; max-width: 800px; background-color: #0C0C0C; border: 1px solid #00FF41; border-bottom:0' class="red">
-    <p style='display:flex; justify-contents: center; align-items: center; gap:20px;'><img src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>Updates</p>
+    <div style='display: flex; gap: 30px; align-items: center; font-weight: bold ; font-family: courier; color:#00FF41; padding: 10px 0px 10px 85px; max-width: 800px; background-color: #0C0C0C; border: 1px solid #00FF41; border-bottom:0' class="red">
+    <img src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>
+      <p>Updates</p>
   </div>
-  <div class=" box red">
+        
+    <!--Update 2-->  
+    
+    <div class='box' style='display: flex; border-bottom: none'>
+      
+     <div style='float-left; width:48%; margin-right:20px'>
+       <p style='padding-bottom: 20px;font-family: courier; color:#00FF41;'>11/12/25</p>
+      <p style='padding-bottom: 20px;font-family: courier; color:#00FF41;'>Slight update to site + end of Mexico/U.S.A trip <br><br>-Simon Owen</p>
+      <span class="dashed"> </span>
+   > Today I uploaded a small update to my site, including launching this page so I can add text and image updates.
+       
+       Two days ago I received an offer letter from the University of Melbourne to study a Masters of Screenwriting at VCA (Melb Uni). I enrolled last night and very excited!
+       <br><br>
+       I'm in Crescent City and I should have already been in San Francisco for a day now, but I was 2 minutes late for the bag checkin at the tiny Del Norte Regional Airport. So I spent another day here. But it turns out it was a great decision as I got to walk the short but beautiful Fern Canoyon Trail Loop. <br><br><br></p>
+  </div>
+    
+    <div style='float: right; width: 48%; top:0; margin-left:20px;'>
+    <img class='image' src='https://i.imgur.com/RRiH08X.jpeg'>
+      <p class='caption'> Davison Rd: The drive to and from the carpark was beautiful</p>
+       <img class='image' src='https://i.imgur.com/wuCXvE7.jpeg'>
+      <p class='caption'> Fern Canyon was used in Jurassic Park 2. The dinosaurs which attack the guy are Compsognathus, aka Compys, which are important in the start of the original Jurassic Park book but didn't appear in the film adaptation until number 2. <a href="https://youtu.be/vxmFmBOfQZg?si=aFVnnRTKYY03BLOJ&t=222">Click here</a></p>
+      
+       <img class='image' src='https://i.imgur.com/Iq2HKzo.jpeg'>
+    </div>
+    
+    </div>
+    
+    
+    
+    <!--Update1-->
+    
+  <div class="box red" style='clear:both'>
     <div>
-      <p style='padding-bottom: 20px;font-family: courier; color:#00FF41;'>Sometime a good few months ago</p>
+      <p style='padding-bottom: 20px;font-family: courier; color:#00FF41;'>Sometime a good few months ago (today: 11/12/25)</p>
       <p style='padding-bottom: 20px;font-family: courier; color:#00FF41;'>Updated movie blog <br><br>-Simon Owen</p>
       <span class="dashed"> </span>
    > I recently updated my favourite movies page which is the first page under the Movies section of my Blog.
 <br><br>The design is sort of a prototype for how my blog content might look across the different sections.
    <br><br>I’m using Figma for the first time to prototype before coding, which saves me time as I can test the design before spending hours on CodePen. I’m slowly learning HTML & CSS as I go along and it’s super fun! Sometimes frustrating when I can’t work stuff out but that’s part of the process.<br><br><br></p>
+    
+    
     </div>
-  
+   
+    
+    
+    
     <div>
       
    <img style='height: 100px; max-' src='https://i.imgur.com/pSbtRA3.gif'>
     </div>
   </div>
+  
+  
       <br><br>
 
   <!--Close-->
   </div>
-  </div>
+  </div> </body>                                                                  
 
- </body>                                                                  
 </html>
