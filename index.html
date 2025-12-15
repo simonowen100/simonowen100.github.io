@@ -17,16 +17,23 @@
       <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
 <meta charset="UTF-8"> 
+  
+ 
+
     
-</head>
+
 
 <!--Cursor & HTML props-->
 <style>
+  
+  
+  
 body {
-  background-color: #1D8974;
+  background-color: #0c0c0c;
   }
   
 .html {
@@ -42,13 +49,14 @@ body {
   margin: 0px 0px 10px 0px;
   transition: 0.3s;
   display: flex;
+   
   }
   
  span2:hover { 
  font-family:Pixelify Sans;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 background: linear-gradient(124deg, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #ff2400);
-  border-radius: 100px;
+  border-radius: 5px;
   background-size: 1800% 1800%;
   animation: rainbow 15s linear infinite;  
   color: white;
@@ -77,16 +85,17 @@ h2 {
 }
   
   h3 {
-  font-family: Arial, Pixelify Sans, Bungee, Brush Script MT;
-  font-size: 14pt;
-  font-weight: normal;
+    font-family: 'Fusion Pixel 10px Proportional JP';
+  font-size: 10pt;
+    font-weight: normal;
+    
 }
   
   heading {
-    font-family: Jost, arial;
+    font-family: 'Fusion Pixel 10px Proportional JP', Jost, arial;
     font-weight: bold;
-    color: white;
-    font-size: 50pt;
+    color: #1D8974;
+    font-size: 40pt;
     line-height: 1;
     text-align: left;
     padding-bottom: 15px;
@@ -179,27 +188,44 @@ a:visited: {
     flex-direction: column;
     justify-contents: left;
     align-items: left;
-    justfiy-contents: left;
-    align-contents: left;
   }  
   
   h3 span {
-    background-color: #FEFEFE;
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 8px 15px 8px 15px;
     text-wrap: nowrap;
+     background-color: #eeeeee;
+  border: 4px outset #cccccc;
+  border-top: 1px outset #cccccc;
+  border-bottom: 6px outset #bbbbbb;
+  border-radius: 5px;
+  padding: 0px 10px;
   }
   
   span2 {
     background-color: #FEFEFE;
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 8px 15px 8px 15px;
     text-wrap: nowrap;
   }
   
+  .slugline {
+      color: #1D8974;
+      font-size: 18pt;
+      font-family: "Schibsted Grotesk", 'Fusion Pixel 10px Proportional JP';
+  }
+  
+/* fusion-pixel-10px-proportional-jp-latin-400-normal */
+@font-face {
+  font-family: 'Fusion Pixel 10px Proportional JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
+}
+  
+ 
 </style>
+  </head>
   
 <!--START OF CODE--> 
 <body>
@@ -213,25 +239,31 @@ a:visited: {
 
   <div class="red flex-container">  
     
-    <div style='background-color: #1D8974; margin: 0px auto; left:50%; right:50%; display: flex; column-gap: 20px; padding:50px; border: 2px dashed #FEFEFE; border-radius: 100px; margin: auto'> 
-      <div>
-      <img style='width:75px;' src='https://i.imgur.com/ldsZz69.gif'>
+    <div style='left:50%; right:50%; padding:50px; border: 2px dashed #FEFEFE; border-radius: 100px; margin: auto; max-width: 80vw'> 
+     
+      
+      <div style='z-index:-100; width:100%; display: flex; justify-content: right; vertical-align: center; margin: auto; position: sticky; padding-bottom: 25px'>
+     <img style='height: 400px; position:absolute;'src='https://i.imgur.com/JxFvC96.gif'>
+     
       </div>
         
-  <div class='red column-2-container'>     
+  <div class='red column-2-container'>
+        
+  
+    
      <heading> Hi, I'm <br> Simon Owen </heading>
      
     
-      <subline style='margin-bottom: 35px' class='red'>
+      <subline style='margin-bottom: 35px' class='slugline red'>
     Melbourne based communication designer and writer
   </subline>
    
   <section class='red'>
     
-    <a target='_blank' href='simon-portfolio.pdf' class='h3 span button button:hover'> <h3><span><img style='position: relative; top:3px; right: 3px; width: 20px' src='https://www.iconpacks.net/icons/2/free-folder-icon-1437-thumb.png'> View PDF portfolio </span></h3>
+    <a target='_blank' href='simon-portfolio.pdf' class='h3 span button button:hover'> <h3><span><img style='position: relative; top:3px; right: 3px; width: 16px' src='https://www.iconpacks.net/icons/2/free-folder-icon-1437-thumb.png'> View PDF portfolio </span></h3>
        </a>
      <a href='home' class='button rainbow'>
-       <h3><span2><img style='position: relative; top:3.5px; right: 3px; width: 20px' src='https://cdn.pixabay.com/photo/2016/11/30/17/10/web-1873373_960_720.png'> Enter personal site </span2></h3>
+       <h3><span><img style='position: relative; top:3px; right: 3px; width:15px' src='https://cdn.pixabay.com/photo/2016/11/30/17/10/web-1873373_960_720.png'> Enter personal site </span></h3>
    </a> 
     </section>
     
@@ -253,3 +285,4 @@ a:visited: {
   </body>                                                                  
 
   </html>
+
