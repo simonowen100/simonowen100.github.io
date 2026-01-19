@@ -179,23 +179,7 @@ body {
   <div id="f" style="height:100%;width:0;background:#555;"></div>
 </div>
 
-<script>
-  window.a = document.getElementById("a");
-  window.t = document.getElementById("t");
-  window.f = document.getElementById("f");
 
-  a.ontimeupdate = () => {
-    if (!isNaN(a.duration)) {
-      f.style.width = (a.currentTime / a.duration) * 100 + "%";
-    }
-  };
-
-  t.onclick = e => {
-    if (isNaN(a.duration)) return;
-    const x = e.offsetX / t.offsetWidth;
-    a.currentTime = x * a.duration;
-  };
-</script>
 
             </div>
 
@@ -238,7 +222,26 @@ body {
     <div style='color: white; text-align: center'  class: 'footer'>
    Website coded in HTML & CSS by Simon Owen 2025<img style='scale:0.75; position:relative; top:10px;' src='https://web.archive.org/web/20010817032646/http://br.geocities.com:80/thecraftbr/images/copyright.gif'> 
     </div> 
-     </br>                                                             
+     </br>         
+  
+  
+  <script>
+  window.a = document.getElementById("a");
+  window.t = document.getElementById("t");
+  window.f = document.getElementById("f");
+
+  a.ontimeupdate = () => {
+    if (!isNaN(a.duration)) {
+      f.style.width = (a.currentTime / a.duration) * 100 + "%";
+    }
+  };
+
+  t.onclick = e => {
+    if (isNaN(a.duration)) return;
+    const x = e.offsetX / t.offsetWidth;
+    a.currentTime = x * a.duration;
+  };
+</script>
                                                                
   </body>                                                                  
 </html>
