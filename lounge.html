@@ -166,9 +166,10 @@ body {
             <div style='display:flex'>
              <div> <img style='width:50px' src='images/WalkaboutAlbumCover.jpg'>
             </div>
-              
-              
-          <audio id="a" src="Audio/JohnBarry-Walkabout-MainTitle.mp3"></audio>
+
+          <audio id="a">
+            <source src="Audio/JohnBarry-Walkabout-MainTitle.mp3" type="audio/mp3">
+            </audio>
 
 <button onclick="a.paused ? a.play() : a.pause()">Play/Pause</button>
 <button onclick="a.muted = !a.muted">Mute/Unmute</button>
@@ -239,3 +240,4 @@ body {
                                                                
   </body>                                                                  
 </html>
+
