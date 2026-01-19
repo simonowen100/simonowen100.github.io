@@ -166,7 +166,8 @@ body {
             <div style='display:flex'>
              <div> <img style='width:50px' src='images/WalkaboutAlbumCover.jpg'>
             </div>
-
+              
+              
           <audio id="a">
             <source src="Audio/JohnBarry-Walkabout-MainTitle.mp3" type="audio/mp3">
             </audio>
@@ -179,9 +180,9 @@ body {
 </div>
 
 <script>
-  const a = document.getElementById("a");
-  const t = document.getElementById("t");
-  const f = document.getElementById("f");
+  window.a = document.getElementById("a");
+  window.t = document.getElementById("t");
+  window.f = document.getElementById("f");
 
   a.ontimeupdate = () => {
     if (!isNaN(a.duration)) {
@@ -190,11 +191,12 @@ body {
   };
 
   t.onclick = e => {
-    if (isNaN(a.duration)) return; // prevent the error
+    if (isNaN(a.duration)) return;
     const x = e.offsetX / t.offsetWidth;
     a.currentTime = x * a.duration;
   };
 </script>
+
             </div>
 
 
@@ -240,4 +242,3 @@ body {
                                                                
   </body>                                                                  
 </html>
-
