@@ -52,6 +52,7 @@ body {
     line-height: 0.9;
     color: black;
     padding:15px 10px 3px 10px;
+    text-align: left;
 }
   
   .box-subheader {
@@ -60,6 +61,8 @@ body {
     font-size: 14pt;
     line-height: 1.2;
     padding: 5px 10px;
+    text-align: left;
+    color:black;
 }
   
   .box-body {
@@ -246,6 +249,14 @@ body {
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
 } 
   
+.menu-gallery {
+  background:rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: flex-end; object-fit:contain; border: solid 1px turquoise; padding:10px;
+}
+
+.menu-gallery-image {
+  width:100%; max-height:200px;
+}
+
 </style>
   
 <!--START OF CODE--> 
@@ -279,10 +290,32 @@ body {
  <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"  class='top-button'> Guestbook </a>
  </div>
 
+ 
+<div style="display: flex; flex-direction: column; align-items:first flex-start">
+<p style='margin:auto;color:white; text-align: left'> Great Movies- Click to view page</p>
+
+ <div style="color:white; display:flex; justify-content: center; align-items: center; margin:auto;">
+   
+<a href='walkabout'> <div class='menu-gallery'>
+ <img class='menu-gallery-image' src='images/WalkaboutVintagePoster.jpg'>
+  <p> Walkabout</p>
+</div></a>
+<a href='strictlyballroom'><div  style='border-left:none;' class='menu-gallery'> 
+ <img class='menu-gallery-image' src='images/strictlyballroomstill.jpg'>
+  Strictly Ballroom
+</div></a>
+<a href='ingloriousbasterds'><div style='border-left:none;' class='menu-gallery'>
+  <img class='menu-gallery-image' src='images/IngloriousBasterdsPoster.jpg'>
+  Inglorious Basterds
+</div></a>
+
+ </div>
+ </div>
+ <br>
   
    <div class='big-container'>
- <div style='padding: 8px 20px 15px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; background-color: white; margin: auto;'>
-   <span><p class='box-header'>My Favourite Movies of All Time</p><p class='box-subheader'> Leave a message on my guestbook telling me your favourite movie! </p></span>
+ <div style='padding: 8px 20px 15px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; margin: auto;'>
+   <span><p style="color:white;text-align:center">My Favourite Movies of All Time</p><p style="color:white; text-align:center"'> Leave a message on my guestbook telling me your favourite movie! </p></span>
    <span><img style='height: 80px' src='https://i.imgur.com/s912W0d.gif'></span>
    <span> <img style='height:60px' src='https://web.archive.org/web/20090829203505/http://geocities.com/~perkinshome/images/mppopcorn.gif'>
    </span>
@@ -294,7 +327,7 @@ body {
   <div class='container'>
 <!--1-->
   <div class='column'>
-    <img class='poster' src='https://m.media-amazon.com/images/M/MV5BODY2YWYwM2YtZTVlNC00MjgyLTgzYTgtNmFmYWE5ZmY1MDM5XkEyXkFqcGc@._V1_.jpg'>
+    <img class='poster' src='images/arealpainposter.jpg'>
     <div>
       <p class='box-header'>A Real Pain </p>
     <p class='box-subheader'> Jesse Eisenberg <br>2024 </p><br>
@@ -314,7 +347,7 @@ body {
     </div>
 <!--2-->
   <div class='column'>
-    <img class='poster' src='https://m.media-amazon.com/images/M/MV5BNzllNzlkNzYtZTEzZi00ODMwLWFlYTctZDE5Mzk0NTM1NmViXkEyXkFqcGc@._V1_.jpg'>
+    <img class='poster' src='images/willywonkaposter.jpg'>
    <div>
     <p class='box-header'>Willy Wonka & The Chocolate Factory </p>
      <p class='box-subheader'> Mel Stuart <br>1971 </p><span class="dashed"> </span></div>
@@ -332,7 +365,7 @@ body {
   </div>
 <!--3-->
  <div class='column'>
-  <img class='poster' src='https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg'>
+  <img class='poster' src='images/madmaxposter.jpg'>
      <div>
     <p class='box-header'>Mad Max: Fury Road </p> 
        <p class='box-subheader'> George Miller <br>2015</p><span class="dashed"> </span></div>
@@ -346,7 +379,7 @@ body {
   
    <!--4-->
  <div class='column'>
-  <img style='object-position: 100% 10%' class='poster' src='https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg'>
+  <img style='object-position: 100% 10%' class='poster' src='images/matrixposter.jpg'>
      <div>
     <p class='box-header'>The Matrix</p> 
        <p class='box-subheader'> Lana Wachowski, Lilly Wachowski <br>1999</p><span class="dashed"> </span></div>
@@ -364,7 +397,7 @@ body {
    
 <!--5-->
      <div style='display: flex;' class='column'>
-  <img class='poster' src='https://i.imgur.com/0sIMsY4.jpeg'>
+  <img class='poster' src='images/onceuponatimeinhollywoodposter.jpg'>
      <div>
     <p class='box-header'>Once Upon a Time in Hollywood</p> 
        <p class='box-subheader'> Quentin Tarantino <br>2019</p><span class="dashed"> </span></div>
@@ -378,7 +411,7 @@ body {
     
     <!--6-->
     <div style='display: flex;' class='column'>
-  <img style='object-position: 100% 30%;' class='poster' src='https://i.imgur.com/qKN0f2f.jpeg'>
+  <img style='object-position: 100% 30%;' class='poster' src='images/fiddlerposter.jpg'>
     <div> 
     <p class='box-header'>Fiddler on the Roof</p> 
       <p class='box-subheader'> Norman Jewison <br>1971</p><span class="dashed"> </span></div>
@@ -392,7 +425,7 @@ body {
     
         <!--7-->
     <div style='display: flex;' class='column'>
- <img class='poster' style='border:1px solid white; object-position: 100% 30%' src='https://i.ebayimg.com/images/g/sIUAAMXQRPRTHKVV/s-l1200.jpg'>
+ <img class='poster' style='border:1px solid white; object-position: 100% 30%' src='images/jurassicpark.jpg'>
      <div>
     <p class='box-header'>Jurassic Park</p> 
        <p class='box-subheader'> Steven Spielberg <br>1993</p><span class="dashed"> </span></div>
@@ -406,7 +439,7 @@ body {
     
      <!--8-->
     <div style='display: flex;' class='column'>
- <img class='poster' src='https://m.media-amazon.com/images/M/MV5BNjAwN2M2MjAtZDk2MS00MDQ2LTkxZWYtNTUyNTQ0YWI2NGJiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg'>
+ <img class='poster' src='images/wakeinfrightposter_2.jpg'>
     <div>
     <p class='box-header'>Wake in Fright</p> 
       <p class='box-subheader'> Ted Kotcheff <br>1971</p><span class="dashed"> </span></div>
