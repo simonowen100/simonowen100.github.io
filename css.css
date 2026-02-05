@@ -28,7 +28,6 @@
   margin: auto;
   justify-items: center;
   justify-content: center;
-  border-radius:25px;
   margin-top:10px;
 }
 
@@ -295,6 +294,7 @@ background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
 body {
     background-color: blue;
     font: normal 1em / 1.5em BlinkMacSystemFont, -apple-system, 'Segoe UI', roboto, helvetica, arial, sans-serif;
+    overflow-x: clip;
  }
 
 audio {
