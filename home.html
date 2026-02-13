@@ -18,7 +18,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css.css">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
@@ -76,16 +76,29 @@ body {
   }
   
   .update {
+    -webkit-text-stroke: 0.5px white;
+    border: 4px groove #00FF41;
+    font-size: small;
     color: white;
-    background: #d16254;
+    background: #1c1c1c;
     padding: 3px;
     text-align: center;
     margin-bottom: 15px;
-    font-family: serif, courier;
-    font-weight: bold;
+    font-family: "Doto", sans-serif, serif, courier;
+    font-weight: 900;
     border-radius: 15px;
   }
   
+body-copy-2 {
+  line-height: 1.6;
+  /* 4. Improve text rendering */
+  font-smooth: always;
+  color: black;
+  font-family: serif;
+  font-size: 12pt;
+  margin: 15px 30px 20px 30px;
+}
+
 </style>
   
 <!--START OF CODE--> 
@@ -94,13 +107,13 @@ body {
  
    <br><br><br><br>  
   
-  <div style='position:sticky; display:flex; flex-wrap: wrap; column-gap: 30px; align-items: center; justify-content: center; margin: auto;'>
-    <div><img style='max-height: 100px' src='https://i.imgur.com/JxFvC96.gif'>
+  <div style='position:sticky; display:flex; column-gap: 30px; align-items: center; justify-content: center; margin: auto;'>
+    <div><img style='max-height: 100px' src='images/my-photos/Monogram.gif'>
     </div>
   <div>
   <section style='position: relative; right:200px; text-align:center'> <img src="https://blob.gifcities.org/gifcities/MQ3FQPY2Y26I25M6BD3XQKREYF3OD5LM.gif"> </section>
   
- <section style="text-align: center; margin-top: 0px;"> <img style='width: 600px' src='https://i.imgur.com/5Q3FYjU.png'> 
+ <section style="text-align: center; margin-top: 0px;"> <img style='width: 600px' src='images/Futura_Banner.png'> 
   </section> 
   <br>
   </div>
@@ -137,17 +150,15 @@ body {
      
        <img style="width:100%; border-radius: 150px;" src="https://media.tenor.com/gSfs7xmRUXcAAAAM/death-star-spin.gif"> <br><br>
        <img style="scale: 1; width:100%" src="https://web.archive.org/web/20091027034516/http://www.geocities.com/seimomoney/starwars/des.gif">
-       <br><br>
+      
        <img style="scale:.8; display: block; margin: 0 auto" src="https://web.archive.org/web/20091019205535im_/http://www.geocities.com/mamfa66/lavalamp.gif"><br>
-       <img style="width:100%; display: block; margin: 0 auto;" src="https://web.archive.org/web/20091027034436if_/http://www.geocities.com/seimomoney/starwars/shuttle.gif"><br><br>
+       <img style="width:100%; display: block; margin: 0 auto;" src="https://web.archive.org/web/20091027034436if_/http://www.geocities.com/seimomoney/starwars/shuttle.gif"><br>
        <img style="width: 100%; scale:2; display: block; margin: 0 auto;"  src="https://web.archive.org/web/20091027034516if_/http://www.geocities.com/seimomoney/starwars/deathstar.gif"><br>
-    <img style="width: 100%;display: block; margin: 0 auto;" src="https://web.archive.org/web/20090830012237/http://www.geocities.com/Area51/Dimension/7380/starwars/goldimp.gif">
-       <img style="width: 100%;display: block; margin: 0 auto;" src="https://pa1.aminoapps.com/6419/c2c784cb345428ef49f4daad6ae60088d4dac42c_hq.gif">
     </section>
   </div>  
   
 <!--2-->
-  <div class="red" style="max-width: 100px; margin: 0px 20px 0px 15px;">
+  <div class="red" style="max-width: 50px; margin: 0px 20px 0px 15px;">
      <section style= "padding:0px 0px 15px 0px; z-index=10;">
       
            
@@ -162,10 +173,13 @@ body {
         </list-style>
     </section>
     
+<br>
+    <img src="images/GIFs/Home/LavaLampRed.gif">
+   
     <section style="width: 100%; margin-top:15px"> 
     <img style="display: block; margin: 0 auto;" class="fishbowl" src="https://i.pinimg.com/originals/f4/1c/52/f41c52015e887905534dc733c2767d64.gif">
     </section>
-   
+    
   </div>
   
 <!--3-->
@@ -196,9 +210,9 @@ body {
   </div>
 <!--second section of 3-->                            
 <section class='red' style="border-radius: 0px 0px 15px 15px; background-color: #FEFEFE; width: 600px; display: block; margin:0px auto; padding:15px 50px;"> 
-  <section class='bar red'> <img style='margin:0px 15px; height: 75px' src='https://i.gifer.com/origin/c6/c6afab251a20e6d0eb80b983450bc66e_w200.gif'>  <h2> What you can do on this site: </h2>
+  <section class='bar red'> <img style='margin:0px 15px; height: 50px' src='https://i.gifer.com/origin/c6/c6afab251a20e6d0eb80b983450bc66e_w200.gif'>  <h2> What you can do on this site: </h2>
   </section>
-  <section> <body-copy>
+  <section> <body-copy-2>
   <ul>
     <li> Visit Quick Links (left)
     <li> Visit different pages on the site
@@ -210,7 +224,7 @@ body {
         <li> Asset Log: all assets cited- COMING SOON
           <li> Lounge: gifs and music
             <li> Guestbook: leave a message
-      </body-copy>
+      </body-copy-2>
     </section>
     </section>
   </div>
@@ -222,9 +236,11 @@ body {
     <section>
    
             
-     <p class='update'> Site last updated <br> 21/01/2026 </p>
+     <div> 
       
-     <p style='margin-bottom:10px; border-radius: 15px; font-size: small; line-height:0.8;font-weight: bold; font-family: courier; text-align: center; padding:3px; padding-top:10px; color: white; background-color: purple'> CURRENT VIBE<br><img src='https://web.archive.org/web/20090728064514if_/http://www.geocities.com/kuettel96/smileyoncomputer.gif'></p>
+      <p style='background-image: url(images/PixelMatrixRain.gif)' class='update'> Site last updated <br> 12/02/2026 </p> </div>
+      
+     <p style='margin-bottom:10px; border-radius: 15px; font-size: small; line-height:0.8;font-weight: bold; font-family: courier; text-align: center; padding:3px; padding-top:10px; color: white; background-color: purple'> CURRENT VIBE<br><img style='width:100%' src='images/MatrixComputerSquare.gif'></p>
          <div>
            
            
@@ -238,29 +254,21 @@ body {
     <button onclick="document.getElementById('player').pause()">Pause</button>
     <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
   
-<span id="currentTime">0:00</span>
-  <div class="progress-bar-container">
-    <input type="range" id="progressBar" min="0" max="100" value="0" step="0.1">
-  </div>
-  <span id="duration">0:00</span>
-    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
   <br><br>
 </div>
-            <img style='max-width:100px' src='https://m.media-amazon.com/images/M/MV5BNjAwN2M2MjAtZDk2MS00MDQ2LTkxZWYtNTUyNTQ0YWI2NGJiXkEyXkFqcGc@._V1_.jpg'>
+            <img style='max-width:100%' src='https://m.media-amazon.com/images/M/MV5BNjAwN2M2MjAtZDk2MS00MDQ2LTkxZWYtNTUyNTQ0YWI2NGJiXkEyXkFqcGc@._V1_.jpg'>
            </div>
 
      
        </div>
-    <img style="width:100%; border-radius: 200px; scale: 1;" src="https://i.imgur.com/RcgWiFv.gif"> <br><br><br>
-      <img class='enlarge' style="display: block; margin: 0 auto;" src="https://web.archive.org/web/20090821212633im_/http://geocities.com/SunsetStrip/Show/1574/imagers/lavalamp.gif"><br><br>
-      <img style="width:100%;" src="https://web.archive.org/web/20090901180702if_/http://geocities.com/mrobots2000/images/starwars/at-st.gif"> <br><br>
-      <img style="display: block; margin: 0 auto; border-radius: 150px;" src="https://web.archive.org/web/20090829180955im_/http://geocities.com/Area51/Shadowlands/2297/lavalamp.gif"><br><br>
-      <img style="width:100px;" src="https://web.archive.org/web/20091019065307if_/http://espanol.geocities.com/paulinabaeza/starwars/28.gif">
+    <img style="width:100%; border-radius: 200px; scale: 1;" src=""> 
+      <img class='enlarge' style="display: block; margin: 0 auto;" src="">  
+      <img style="width:100px;" src="">
     </section>
   </div>  
   
   <!--5-->
-   <div class="red" style="visibility:hidden;width: 100px; margin: 0px 15px 0px 15px;">
+   <div class="red" style="visibility:hidden;width: 50px; margin: 0px 15px 0px 15px;">
   </div>
   
   
@@ -268,7 +276,7 @@ body {
   </div>
   
   
-  <br><br>
+  
     <div style='color: white; text-align: center'  class: 'footer'>
    Website coded in HTML & CSS by Simon Owen 2025<img style='scale:0.75; position:relative; top:10px;' src='https://web.archive.org/web/20010817032646/http://br.geocities.com:80/thecraftbr/images/copyright.gif'> 
     </div> 
