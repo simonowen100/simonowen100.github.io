@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
+<meta charset="UTF-8"> 
+    
+</head>
+
+<!--Cursor & HTML props-->
+<style>
+body {
+  cursor: url(""), default;
+}
+
+.html {
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    width: 100vw;
+  }
+  
+  .top-menu-image {
+    width:30px;
+    position: sticky;
+    right:100%;
+  }
+  
+  .box-header {
+  font-family: "VT323", "Ticketing", "Lekton", monospace;
+  font-weight: 700;
+     font-size: 18pt;
+    line-height: 0.9;
+    color: black;
+    padding:15px 10px 3px 10px;
+    text-align: left;
+}
+  
+  .box-subheader {
+    font-family: "Lekton", monospace;
+    font-weight: 700;
+    font-size: 14pt;
+    line-height: 1.2;
+    padding: 5px 10px;
+    text-align: left;
+    color:black;
+}
+  
+  .box-body {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height:1.5;
+    padding: 5px 15px;
+}
+  
+  .a2 {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  
+  .big-container {
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  right: 10%;
+  left:10%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+  
+  /*catalogue*/
+  .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: auto;
+}
+  
+  .box-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;
+    margin-top: auto;
+  }
+  
+ .poster {
+    height: 300px;
+    width: auto;
+    border-radius: 0px 0px 0px 0px;
+   object-fit: cover;
+   border: 0px solid red;
+   vertical-align: bottom;
+   filter: drop-shadow(0px 0px 3px rgba(0,0,0, 0.75));
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FEFEFE;
+  z-index: 1;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {}
+
+
+
+/* Default column layout */
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 460px;
+  max-height: 600px;
+  width: 0;
+  margin-bottom: auto;
+  border-radius: 0px 0px 15px 15px;
+  background-color: #FEFEFE;
+  border: 0px solid red;
+  min-width: 200px;
+ 
+  overflow:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}  
+  
+/* Styling the details elements */
+.column details {
+    border-top: 0px dashed black;
+  border-radius: 15px 15px 0px 0px;
+    padding: 0px;
+    text-wrap: none;
+}
+
+/* Smooth expansion */
+.container .column:has(details[open]) {
+    flex-basis: 50%;
+    max-width: 50%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* Non-expanded columns stay side by side */
+.container .column:not(:has(details[open])) {
+    flex: 1;
+    max-width: 200px;
+  height:auto;
+}
+  
+  .column::-webkit-scrollbar {
+  display: none;
+  }
+  
+  summary {
+    background-color: #bbbbbb;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    outline: 1px solid #333333;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+    color: black;
+  } 
+  summary:hover {
+    color: white;
+    background-color: #333333;
+    outline: 1px solid #333333;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+  }
+  
+    .summary2 {
+    background-color: #bbbbbb;
+    width: 100%;
+    margin:0;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    border: 1px solid #333333;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+    color: black;
+  } 
+  .summary2:hover {
+    color: white;
+    background-color: #333333;
+    border: 1px solid black;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+  }
+  
+  .dashed {
+  border-top: 1px dashed black;
+    width: 100%;
+    display: block;
+  }
+  
+  @font-face {
+  font-family: 'Fusion Pixel 10px Proportional JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
+} 
+  
+.menu-gallery {
+  background:rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; object-fit:contain; border: solid 1px turquoise; padding:10px;
+}
+
+.menu-gallery-image {
+  width:100%; max-height:200px;
+}
+
+</style>
+  
+<!--START OF CODE--> 
+ <body>
+  
+   <img class="page-bg-container" src="https://img.itch.zone/aW1hZ2UvMTY1NDczNS85NzM1Nzg1LmdpZg==/original/LK07lW.gif">
+   <br><br><br><br>  
+  
+ <section style="text-align: center; margin-top: 32px;"> <img style='width: 600px' src='https://i.imgur.com/5Q3FYjU.png'> 
+  </section> 
+  <br>
+  <div style="display:flex; text-align: center;" class='top-menu'>
+      <a class='top-button' href=home> Home </a>
+      <a href="about" class='top-button'> About </a>
+      <a href="links"  class='top-button'> Links </a>
+   <div  class="dropdown top-button">
+      <a href="" style='color:blue'> Blog </a>
+  <div class="dropdown-content">
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="updates"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020141126/http://geocities.com/HotSprings/Spa/2934/taoanim.gif'> Taoisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090820040827if_/http://www.geocities.com/musicscrapbook/rotatingJewstar.gif'> Judaisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020084047/http://www.geocities.com/pjadams49417/popcorneat.gif'> Snacks</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091027072429if_/http://geocities.com/portfolio23015/rotating_Earth.gif'> Travel</a>
+  </div>
+     </div> </a>
+  <a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Asset Log </a> 
+  <a style='' href="lounge"  class='top-button'> Lounge </a>
+ <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"  class='top-button'> Guestbook </a>
+ </div>
+
+ 
+<div style="display: flex; flex-direction: column; align-items:first flex-start">
+<p style='margin:auto;color:white; text-align: left'> Great Movies- Click to view page</p>
+
+ <div style="color:white; display:flex; justify-content: center; align-items: center; margin:auto;">
+   
+<a href='walkabout'> <div class='menu-gallery'>
+ <img class='menu-gallery-image' src='images/WalkaboutVintagePoster.jpg'>
+  <p> Walkabout</p>
+</div></a>
+<a href='strictlyballroom'><div  style='border-left:none;' class='menu-gallery'> 
+ <img class='menu-gallery-image' src='images/strictlyballroomstill.jpg'>
+  Strictly Ballroom
+</div></a>
+<a href='ingloriousbasterds'><div style='border-left:none;' class='menu-gallery'>
+  <img class='menu-gallery-image' src='images/IngloriousBasterdsPoster.jpg'>
+  Inglorious Basterds
+</div></a>
+
+ </div>
+ </div>
+ <br>
+  
+   <div class='big-container'>
+ <div style='padding: 8px 20px 15px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; margin: auto;'>
+   <span><p style="color:white;text-align:center">My Favourite Movies of All Time</p><p style="color:white; text-align:center"'> Leave a message on my guestbook telling me your favourite movie! </p></span>
+   <span><img style='height: 80px' src='https://i.imgur.com/s912W0d.gif'></span>
+   <span> <img style='height:60px' src='https://web.archive.org/web/20090829203505/http://geocities.com/~perkinshome/images/mppopcorn.gif'>
+   </span>
+   </p>
+     </div>
+  <br>
+
+     
+  <div class='container'>
+<!--1-->
+  <div class='column'>
+    <img class='poster' src='images/arealpainposter.jpg'>
+    <div>
+      <p class='box-header'>A Real Pain </p>
+    <p class='box-subheader'> Jesse Eisenberg <br>2024 </p><br>
+      <span class="dashed"> </span>
+    </div>
+       
+      <div class='box-text-container'>
+        <details>  <summary>Show more</summary>
+          <p class='box-body'> <b>Scroll&#8597;</b><br>This is a film which moved me to tears through almost the entire runtime, and I think it's a highly relevant film for young, European-diasporic Jews such as myself. It packs a punch in a concise 89 minutes, never rushing nor dragging. <br><br> A Real Pain is a sober and empathetic depiction of two emotionally dysfunctional cousins who are foils to eachother. One who expresses his mental illness with sometimes charming and sometimes manic behaviour, and another who fears expression and supresses his emotion. <br><br>The film covers diasporic identiy, specifically contemporary, middle-class Jews' relationship to the Holocaust and Europe more broadly. It follows a group of foreigners revisiting their heritage on a Holocaust tour of Poland, including two white, older couples, a young African survivior of the Rwandan genocide who's a Jewish convert, and the two main characters. <br><br> This film is truly for everyone as it covers the themes of family, mental illness, and grappling with one's heritage, in a way that would appeal to many.<br><br>
+            <img style='max-height:150px;' src='https://media0.giphy.com/media/SKGpP8WHjG5KZYt3Tv/200.gif'><br><br>
+        I watched this by myself at Classic Cinemas Elsternwick, and apart from me there were two eldery couples in the theatre. They didn't seem to appreciate the film's crass stoner jokes as much as I did, but they were moved by its more serious and intimate moments of confrontation. The characters of A Real Pain confront eachother as much as they confront their shadow selves. </p><br><br>
+       
+          <a class='a2 summary2' target='_blank' href='https://www.youtube.com/watch?v=b2et8Vpu7Ls'>Trailer</a></a>
+         
+        </details>
+    </div>
+    </div>
+<!--2-->
+  <div class='column'>
+    <img class='poster' src='images/willywonkaposter.jpg'>
+   <div>
+    <p class='box-header'>Willy Wonka & The Chocolate Factory </p>
+     <p class='box-subheader'> Mel Stuart <br>1971 </p><span class="dashed"> </span></div>
+        <div class='box-text-container'> <details>
+          <summary>Show more</summary>
+        <p class='box-body'> This movie imprinted on my brain from my childhood, it is one of the most charming musicals of all time. <br><br>
+          The beauty of this film cannot be understated&mdash;the sets, costumes, and score/ soundtrack are stunning. Apart from the great songs and choreography, and not to mention Wilder's performance which is the backbone of the film, Willy Wonka gets its charm from everything feeling tangible and hand-crafted. These characteristics are lacking in Burton's 2005 adaptation which opts for clinical, sterile designs which can be attributed in part to the film's digital production. <br><br>On 4K disc, overall colour corrections alongside upscaling reveals details that were lost in previous releases. However, as all good remasters should look, the film grain still shows and is more beautiful than ever, giving that warm, fuzzy feeling I remember from being a kid watching this film.<br><br>
+         <div style='text-align: center'>
+          <img style='height:150px' src='https://media3.giphy.com/media/Tt9jctxaVjRny/giphy.gif?cid=6c09b9524bncaq3v7z1mfx6adwpshw3zitqdxjwqv8tgahc5&ep=v1_gifs_search&rid=giphy.gif&ct=g'><img style='height:150px' src='https://i.pinimg.com/222x/cb/cd/64/cbcd64b2cbae168ff21bb6c9acec4a3e.jpg'><br><p style='text-align: left'><i>The fact that this iconic 00s meme image came from this film is awesome.</i></p></div>
+          <br><br>
+         <p class='box-body'> Similarly to Wake in Fright, one of the other films on this list, audiences didn't take to Willy Wonka on its release and it only became a beloved classic in the 80s and 90s with its TV re-runs and home movies </p>
+ <br>
+        </details>
+      </div>
+  </div>
+<!--3-->
+ <div class='column'>
+  <img class='poster' src='images/madmaxposter.jpg'>
+     <div>
+    <p class='box-header'>Mad Max: Fury Road </p> 
+       <p class='box-subheader'> George Miller <br>2015</p><span class="dashed"> </span></div>
+   <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'>Content coming soon</p>
+        </details>
+    </div>
+  </div>
+  
+   <!--4-->
+ <div class='column'>
+  <img style='object-position: 100% 10%' class='poster' src='images/matrixposter.jpg'>
+     <div>
+    <p class='box-header'>The Matrix</p> 
+       <p class='box-subheader'> Lana Wachowski, Lilly Wachowski <br>1999</p><span class="dashed"> </span></div>
+   <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'> Mindblowing film made in Sydney! I've visited a couple of the filming locations which is cool (will insert photos soon). It still holds up to today and the message just gets more and more important as tech develops.<br><br>
+            <img style='height:150px' src='https://web.archive.org/web/20090902011128/http://geocities.com/the_matrix_site/bulletstreem.gif'>
+          <br><br>
+          <img style='background-color:black; border-radius: 0px;' src='https://i.imgur.com/Dyqwzus.gif'>
+        </p>
+        </details>
+    </div>
+  </div>
+   
+<!--5-->
+     <div style='display: flex;' class='column'>
+  <img class='poster' src='images/onceuponatimeinhollywoodposter.jpg'>
+     <div>
+    <p class='box-header'>Once Upon a Time in Hollywood</p> 
+       <p class='box-subheader'> Quentin Tarantino <br>2019</p><span class="dashed"> </span></div>
+       <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'>Content coming soon</p>
+        </details>
+    </div>
+  </div>
+    
+    <!--6-->
+    <div style='display: flex;' class='column'>
+  <img style='object-position: 100% 30%;' class='poster' src='images/fiddlerposter.jpg'>
+    <div> 
+    <p class='box-header'>Fiddler on the Roof</p> 
+      <p class='box-subheader'> Norman Jewison <br>1971</p><span class="dashed"> </span></div>
+      <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'>This film is an adaptation of the Broadway show of the same name which opened in 1964. Its core message is to grapple with the conflict between tradition and modernity, specifically within the context of Jewish Shtetls, small Eastern European villages which were home to Jews in the pre-holocaust era.</p><br>
+        </details>
+    </div>
+  </div>
+    
+        <!--7-->
+    <div style='display: flex;' class='column'>
+ <img class='poster' style='border:1px solid white; object-position: 100% 30%' src='images/jurassicpark.jpg'>
+     <div>
+    <p class='box-header'>Jurassic Park</p> 
+       <p class='box-subheader'> Steven Spielberg <br>1993</p><span class="dashed"> </span></div>
+      <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'>Content coming soon &#129430;</p>
+        </details>
+    </div>
+  </div>
+    
+     <!--8-->
+    <div style='display: flex;' class='column'>
+ <img class='poster' src='images/wakeinfrightposter_2.jpg'>
+    <div>
+    <p class='box-header'>Wake in Fright</p> 
+      <p class='box-subheader'> Ted Kotcheff <br>1971</p><span class="dashed"> </span></div>
+      <div class='box-text-container'>
+        <details>
+          <summary>Show more</summary>
+        <p class='box-body'>Initially released under the title 'Outback' outside of Australia. Content coming soon</p>
+        </details>
+    </div>
+  </div>
+  
+ <!--Blank1-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+    
+    
+  <!--Blank2-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+     
+ <!--Blank3-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+    
+     <!--Blank4-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+    
+     <!--Blank5-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+     
+       <!--Blank6-->
+    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
+    </div>
+     
+     
+ <!--Close--> 
+    </div>
+   <br><br>
+
+                                                               
+  </body>                                                                  
+  </html>
