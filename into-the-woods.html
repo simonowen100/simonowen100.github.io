@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">  
+
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
+<meta charset="UTF-8"> 
+    
+</head>
+
+<!--Cursor & HTML props-->
+<style>
+body {
+  cursor: url(""), default;
+}
+
+.html {
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    width: 100vw;
+  }
+  
+  .top-menu-image {
+    width:30px;
+    position: sticky;
+    right:100%;
+  }
+  
+  .box-header {
+  font-family: "VT323", "Ticketing", "Lekton", monospace;
+  font-weight: 700;
+     font-size: 18pt;
+    line-height: 0.9;
+    color: black;
+    padding:15px 10px 3px 10px;
+    text-align: left;
+}
+  
+  .box-subheader {
+    font-family: "Lekton", monospace;
+    font-weight: 700;
+    font-size: 14pt;
+    line-height: 1.2;
+    padding: 5px 10px;
+    text-align: left;
+    color:black;
+}
+  
+  .box-body {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height:1.5;
+    padding: 5px 15px;
+}
+  
+  .a2 {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  
+  .big-container {
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  right: 10%;
+  left:10%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+  
+  /*catalogue*/
+  .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: auto;
+}
+  
+  .box-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;
+    margin-top: auto;
+  }
+  
+ .poster {
+    height: 300px;
+    width: auto;
+    border-radius: 0px 0px 0px 0px;
+   object-fit: cover;
+   border: 0px solid red;
+   vertical-align: bottom;
+   filter: drop-shadow(0px 0px 3px rgba(0,0,0, 0.75));
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FEFEFE;
+  z-index: 1;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {}
+
+
+
+/* Default column layout */
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 460px;
+  max-height: 600px;
+  width: 0;
+  margin-bottom: auto;
+  border-radius: 0px 0px 15px 15px;
+  background-color: #FEFEFE;
+  border: 0px solid red;
+  min-width: 200px;
+ 
+  overflow:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}  
+  
+/* Styling the details elements */
+.column details {
+    border-top: 0px dashed black;
+  border-radius: 15px 15px 0px 0px;
+    padding: 0px;
+    text-wrap: none;
+}
+
+/* Smooth expansion */
+.container .column:has(details[open]) {
+    flex-basis: 50%;
+    max-width: 50%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* Non-expanded columns stay side by side */
+.container .column:not(:has(details[open])) {
+    flex: 1;
+    max-width: 200px;
+  height:auto;
+}
+  
+  .column::-webkit-scrollbar {
+  display: none;
+  }
+  
+  summary {
+    background-color: #bbbbbb;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    outline: 1px solid #333333;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+    color: black;
+  } 
+  summary:hover {
+    color: white;
+    background-color: #333333;
+    outline: 1px solid #333333;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+  }
+  
+    .summary2 {
+    background-color: #bbbbbb;
+    width: 100%;
+    margin:0;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    border: 1px solid #333333;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+    color: black;
+  } 
+  .summary2:hover {
+    color: white;
+    background-color: #333333;
+    border: 1px solid black;
+    padding: 5px 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Space Mono',arial;
+    font-weight: 700;
+    font-size: 12pt;
+    text-wrap: nowrap;
+  }
+  
+  .dashed {
+  border-top: 1px dashed black;
+    width: 100%;
+    display: block;
+  }
+  
+  @font-face {
+  font-family: 'Fusion Pixel 10px Proportional JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
+} 
+  
+.menu-gallery {
+  background:rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; object-fit:contain; border: solid 1px turquoise; padding:10px;
+}
+
+.menu-gallery-image {
+  width:100%; max-height:200px;
+}
+
+.mylist {
+  margin:0; text-align:left;
+}
+
+</style>
+  
+<!--START OF CODE--> 
+ <body>
+  
+   <img class="page-bg-container" src="https://img.itch.zone/aW1hZ2UvMTY1NDczNS85NzM1Nzg1LmdpZg==/original/LK07lW.gif">
+   <br><br><br><br>  
+  
+ <section style="text-align: center; margin-top: 32px;"> <img style='width: 600px' src='https://i.imgur.com/5Q3FYjU.png'> 
+  </section> 
+  <br>
+  <div style="display:flex; text-align: center;" class='top-menu'>
+      <a class='top-button' href=home> Home </a>
+      <a href="about" class='top-button'> About </a>
+      <a href="links"  class='top-button'> Links </a>
+   <div  class="dropdown top-button">
+      <a href="" style='color:blue'> Blog </a>
+  <div class="dropdown-content">
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="updates"><img class='top-menu-image' src='https://web.archive.org/web/20091019113916if_/http://br.geocities.com/adhonepbahia/anote.gif'>  Quick Updates</a>
+    <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
+    <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020141126/http://geocities.com/HotSprings/Spa/2934/taoanim.gif'> Taoisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090820040827if_/http://www.geocities.com/musicscrapbook/rotatingJewstar.gif'> Judaisms</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020084047/http://www.geocities.com/pjadams49417/popcorneat.gif'> Snacks</a>
+     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091027072429if_/http://geocities.com/portfolio23015/rotating_Earth.gif'> Travel</a>
+  </div>
+     </div> </a>
+  <a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Asset Log </a> 
+  <a style='' href="lounge"  class='top-button'> Lounge </a>
+ <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"  class='top-button'> Guestbook </a>
+ </div>
+
+ 
+<div style="margin:auto; width:800px; background-color:#333333; display: flex; flex-direction: column;">
+<br>
+<img style='margin:auto; width:250px;' src='images/IntoTheWoodsCover.jpg'>
+<br>
+<br>
+
+  <p style='font-size: 20pt; font-weight:900; font-family: "Source Sans 3"; margin:auto;color:olivedrab; text-align: center'>Into The Woods by John Yorke <br>
+Notes by Simon Owen, 2026</p>
+
+ <div style="color:white; display:flex; flex-direction: column; justify-content: center; align-items: center; margin:50px; margin-top: 20px;">
+   
+<p style='font-family: "Source Sans 3"; color: white; margin:auto; justify-content: center;'>
+
+<b style="color: aquamarine;">Key Defintions:</b>
+  <br>
+<b style="color: lightskyblue;">Story: </b>‘Once upon a time, in such and such a place, something happened.’
+<br>
+<b style="color: lightskyblue;">The Protagonist:</b> The person the story centers around.
+<br>
+<b style="color: lightskyblue;">The Antagonist:</b>  The thing or person the protagonist must vanquish to achieve their goal aka the obstacle/s.
+ (If the antagonist is internal, the same principles apply: the enemy within works in opposition to the host’s better nature – it cripples them). 
+<br>
+<br>
+
+<b style="color:gold">Golden Rules:</b>
+<br>
+
+The protagonist MUST have a goal and desire.
+<br>
+The antagonist represents the protagonist's OPPOSITE.
+
+
+<br>
+<br>
+  Contents
+<br>
+  ACT I  HOME
+<br>
+  1. What is a Story?
+<br>
+  2. Three-Act Structure
+<br>
+  3. Five-Act Structure
+<br>
+  4. The Importance of Change
+<br>
+  5. How We Tell Stories
+<br>
+ACT II  WOODLAND, DAY
+<br>
+  6. Fractals
+<br>
+  7. Acts
+<br>
+  8. The Inciting Incident
+<br>
+  9. Scenes
+<br>
+10. Putting It All Together
+<br>
+ACT III THE FOREST
+<br>
+11. Showing and Telling
+<br>
+ACT IV THE ROAD BACK, NIGHT
+<br>
+12. Character and Characterization
+<br>
+13. Character and Structural Design
+<br>
+14. Character Individuation
+<br>
+15. Dialogue and Characterization
+<br>
+16. Exposition
+<br>
+17. Subtext
+<br>
+ACT V  HOME AGAIN, CHANGED
+<br>
+18. Television and the Triumph of Structure
+<br>
+19. Series and Serial Structure
+<br>
+20. Change in Drama Series
+<br>
+21. Home Again
+<br>
+22. Why?
+<br>
+
+APPENDICES
+<br>
+I. Act Structure of Raiders of the Lost Ark
+<br>
+II. Hamlet – The Structural Form
+<br>
+III. Being John Malkovich – The Structural Form
+<br>
+IV. My Zinc Bed – The Structural Form
+<br>
+V. The Godfather – The Structural Form
+<br>
+VI. First and Last Act Parallels: Some Further Examples
+<br>
+VII. A Lightning Guide to Screenwriting Gurus
+<br>
+Notes
+<br>
+
+</p>
+
+ </div>
+ </div>
+ <br>
+  
+     
+ <!--Close--> 
+    </div>
+   <br><br>
+
+                                                               
+  </body>                                                                  
+  </html>
