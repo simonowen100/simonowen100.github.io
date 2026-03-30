@@ -249,19 +249,42 @@ body {
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/fusion-pixel-10px-proportional-jp@latest/latin-400-normal.woff) format('woff');
 } 
   
-.menu-gallery {
-  background:rgba(0, 0, 0, 0.5); 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: flex-end; object-fit:contain; border: solid 1px turquoise; padding:10px;
+
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:auto;
 }
 
-.menu-gallery-image {
-  width:100%; max-height:200px;
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  height:300px;
+  width: min-content;
+  background-color: white;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: auto;
+  height: 100%;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
 }
 
 </style>
   
+
+
 <!--START OF CODE--> 
  <body>
   
@@ -295,191 +318,64 @@ body {
  </div>
 
  
-<div style="display: flex; flex-direction: column; align-items:first flex-start">
-<p style='margin:auto;color:white; text-align: left'> Great Movies- Click to view page</p>
+<div style="display: flex; flex-direction: column;">
+<p style='margin:auto;color:white;'>My Pics of Melbourne 😍</p>
 
- <div style="color:white; display:flex; justify-content: center; align-items: center; margin:auto;">
-   
-<a href='walkabout'> <div class='menu-gallery'>
- <img class='menu-gallery-image' src='images/WalkaboutVintagePoster.jpg'>
-  <p> Walkabout</p>
-</div></a>
-<a href='strictlyballroom'><div  style='border-left:none;' class='menu-gallery'> 
- <img class='menu-gallery-image' src='images/strictlyballroomstill.jpg'>
-  Strictly Ballroom
-</div></a>
-<a href='ingloriousbasterds'><div style='border-left:none;' class='menu-gallery'>
-  <img class='menu-gallery-image' src='images/IngloriousBasterdsPoster.jpg'>
-  Inglorious Basterds
-</div></a>
+<div class="gallery">
+
+<div class="gallery-item">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="images/Melb/Melb1.GIF" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Catching the tram toward Flinders St Station from the South, crossing the Princes Bridge</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="images/Melb/Melb1.jpeg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">City skyline as viewed from the balcony of the Arts Centre</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_lights.jpg">
+    <img src=" images/Melb/Melb2.jpeg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Carlton Gardens, near the Royal Exhibition Building</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="images/Melb/Melb4.jpeg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">City view from skyscraper</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="images/Melb/Melb1.jpeg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">City skyline as viewed from the balcony of the Arts Centre</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_lights.jpg">
+    <img src=" images/Melb/Melb2.jpeg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Carlton Gardens, near the Royal Exhibition Building</div>
+</div>
+
+
+
+</div>
 
  </div>
  </div>
  <br>
-  
-   <div class='big-container'>
- <div style='padding: 8px 20px 15px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; border-radius: 15px; margin: auto;'>
-   <span><p style="color:white;text-align:center">My Favourite Movies of All Time</p><p style="color:white; text-align:center"'> Leave a message on my guestbook telling me your favourite movie! </p></span>
-   <span><img style='height: 80px' src='https://i.imgur.com/s912W0d.gif'></span>
-   <span> <img style='height:60px' src='https://web.archive.org/web/20090829203505/http://geocities.com/~perkinshome/images/mppopcorn.gif'>
-   </span>
-   </p>
-     </div>
-  <br>
 
-     
-  <div class='container'>
-<!--1-->
-  <div class='column'>
-    <img class='poster' src='images/arealpainposter.jpg'>
-    <div>
-      <p class='box-header'>A Real Pain </p>
-    <p class='box-subheader'> Jesse Eisenberg <br>2024 </p><br>
-      <span class="dashed"> </span>
-    </div>
-       
-      <div class='box-text-container'>
-        <details>  <summary>Show more</summary>
-          <p class='box-body'> <b>Scroll&#8597;</b><br>This is a film which moved me to tears through almost the entire runtime, and I think it's a highly relevant film for young, European-diasporic Jews such as myself. It packs a punch in a concise 89 minutes, never rushing nor dragging. <br><br> A Real Pain is a sober and empathetic depiction of two emotionally dysfunctional cousins who are foils to eachother. One who expresses his mental illness with sometimes charming and sometimes manic behaviour, and another who fears expression and supresses his emotion. <br><br>The film covers diasporic identiy, specifically contemporary, middle-class Jews' relationship to the Holocaust and Europe more broadly. It follows a group of foreigners revisiting their heritage on a Holocaust tour of Poland, including two white, older couples, a young African survivior of the Rwandan genocide who's a Jewish convert, and the two main characters. <br><br> This film is truly for everyone as it covers the themes of family, mental illness, and grappling with one's heritage, in a way that would appeal to many.<br><br>
-            <img style='max-height:150px;' src='https://media0.giphy.com/media/SKGpP8WHjG5KZYt3Tv/200.gif'><br><br>
-        I watched this by myself at Classic Cinemas Elsternwick, and apart from me there were two eldery couples in the theatre. They didn't seem to appreciate the film's crass stoner jokes as much as I did, but they were moved by its more serious and intimate moments of confrontation. The characters of A Real Pain confront eachother as much as they confront their shadow selves. </p><br><br>
-       
-          <a class='a2 summary2' target='_blank' href='https://www.youtube.com/watch?v=b2et8Vpu7Ls'>Trailer</a></a>
-         
-        </details>
-    </div>
-    </div>
-<!--2-->
-  <div class='column'>
-    <img class='poster' src='images/willywonkaposter.jpg'>
-   <div>
-    <p class='box-header'>Willy Wonka & The Chocolate Factory </p>
-     <p class='box-subheader'> Mel Stuart <br>1971 </p><span class="dashed"> </span></div>
-        <div class='box-text-container'> <details>
-          <summary>Show more</summary>
-        <p class='box-body'> This movie imprinted on my brain from my childhood, it is one of the most charming musicals of all time. <br><br>
-          The beauty of this film cannot be understated&mdash;the sets, costumes, and score/ soundtrack are stunning. Apart from the great songs and choreography, and not to mention Wilder's performance which is the backbone of the film, Willy Wonka gets its charm from everything feeling tangible and hand-crafted. These characteristics are lacking in Burton's 2005 adaptation which opts for clinical, sterile designs which can be attributed in part to the film's digital production. <br><br>On 4K disc, overall colour corrections alongside upscaling reveals details that were lost in previous releases. However, as all good remasters should look, the film grain still shows and is more beautiful than ever, giving that warm, fuzzy feeling I remember from being a kid watching this film.<br><br>
-         <div style='text-align: center'>
-          <img style='height:150px' src='https://media3.giphy.com/media/Tt9jctxaVjRny/giphy.gif?cid=6c09b9524bncaq3v7z1mfx6adwpshw3zitqdxjwqv8tgahc5&ep=v1_gifs_search&rid=giphy.gif&ct=g'><img style='height:150px' src='https://i.pinimg.com/222x/cb/cd/64/cbcd64b2cbae168ff21bb6c9acec4a3e.jpg'><br><p style='text-align: left'><i>The fact that this iconic 00s meme image came from this film is awesome.</i></p></div>
-          <br><br>
-         <p class='box-body'> Similarly to Wake in Fright, one of the other films on this list, audiences didn't take to Willy Wonka on its release and it only became a beloved classic in the 80s and 90s with its TV re-runs and home movies </p>
- <br>
-        </details>
-      </div>
-  </div>
-<!--3-->
- <div class='column'>
-  <img class='poster' src='images/madmaxposter.jpg'>
-     <div>
-    <p class='box-header'>Mad Max: Fury Road </p> 
-       <p class='box-subheader'> George Miller <br>2015</p><span class="dashed"> </span></div>
-   <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'>Content coming soon</p>
-        </details>
-    </div>
-  </div>
+
   
-   <!--4-->
- <div class='column'>
-  <img style='object-position: 100% 10%' class='poster' src='images/matrixposter.jpg'>
-     <div>
-    <p class='box-header'>The Matrix</p> 
-       <p class='box-subheader'> Lana Wachowski, Lilly Wachowski <br>1999</p><span class="dashed"> </span></div>
-   <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'> Mindblowing film made in Sydney! I've visited a couple of the filming locations which is cool (will insert photos soon). It still holds up to today and the message just gets more and more important as tech develops.<br><br>
-            <img style='height:150px' src='https://web.archive.org/web/20090902011128/http://geocities.com/the_matrix_site/bulletstreem.gif'>
-          <br><br>
-          <img style='background-color:black; border-radius: 0px;' src='https://i.imgur.com/Dyqwzus.gif'>
-        </p>
-        </details>
-    </div>
-  </div>
-   
-<!--5-->
-     <div style='display: flex;' class='column'>
-  <img class='poster' src='images/onceuponatimeinhollywoodposter.jpg'>
-     <div>
-    <p class='box-header'>Once Upon a Time in Hollywood</p> 
-       <p class='box-subheader'> Quentin Tarantino <br>2019</p><span class="dashed"> </span></div>
-       <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'>Content coming soon</p>
-        </details>
-    </div>
-  </div>
-    
-    <!--6-->
-    <div style='display: flex;' class='column'>
-  <img style='object-position: 100% 30%;' class='poster' src='images/fiddlerposter.jpg'>
-    <div> 
-    <p class='box-header'>Fiddler on the Roof</p> 
-      <p class='box-subheader'> Norman Jewison <br>1971</p><span class="dashed"> </span></div>
-      <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'>This film is an adaptation of the Broadway show of the same name which opened in 1964. Its core message is to grapple with the conflict between tradition and modernity, specifically within the context of Jewish Shtetls, small Eastern European villages which were home to Jews in the pre-holocaust era.</p><br>
-        </details>
-    </div>
-  </div>
-    
-        <!--7-->
-    <div style='display: flex;' class='column'>
- <img class='poster' style='border:1px solid white; object-position: 100% 30%' src='images/jurassicpark.jpg'>
-     <div>
-    <p class='box-header'>Jurassic Park</p> 
-       <p class='box-subheader'> Steven Spielberg <br>1993</p><span class="dashed"> </span></div>
-      <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'>Content coming soon &#129430;</p>
-        </details>
-    </div>
-  </div>
-    
-     <!--8-->
-    <div style='display: flex;' class='column'>
- <img class='poster' src='images/wakeinfrightposter_2.jpg'>
-    <div>
-    <p class='box-header'>Wake in Fright</p> 
-      <p class='box-subheader'> Ted Kotcheff <br>1971</p><span class="dashed"> </span></div>
-      <div class='box-text-container'>
-        <details>
-          <summary>Show more</summary>
-        <p class='box-body'>Initially released under the title 'Outback' outside of Australia. Content coming soon</p>
-        </details>
-    </div>
-  </div>
   
- <!--Blank1-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-    
-    
-  <!--Blank2-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-     
- <!--Blank3-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-    
-     <!--Blank4-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-    
-     <!--Blank5-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-     
-       <!--Blank6-->
-    <div style='min-width: 200px; height:1px; visibility: hidden; display: flex;'>
-    </div>
-     
      
  <!--Close--> 
     </div>
