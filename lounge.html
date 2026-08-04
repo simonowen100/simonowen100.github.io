@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css.css">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
  <audio src="" autoplay> </audio>
- <script src="player.js"></script>
+ 
 <meta charset="UTF-8"> 
   
     
@@ -366,23 +366,7 @@ body {
      </br>         
   
   
-  <script>
-  window.a = document.getElementById("a");
-  window.t = document.getElementById("t");
-  window.f = document.getElementById("f");
-
-  a.ontimeupdate = () => {
-    if (!isNaN(a.duration)) {
-      f.style.width = (a.currentTime / a.duration) * 100 + "%";
-    }
-  };
-
-  t.onclick = e => {
-    if (isNaN(a.duration)) return;
-    const x = e.offsetX / t.offsetWidth;
-    a.currentTime = x * a.duration;
-  };
-</script>
+ <script src="player.js"></script>
                                                                
   </body>                                                                  
 </html>
