@@ -366,7 +366,25 @@ body {
      </br>         
   
   
- <script src="player.js"></script>
+  <script>
+  const player = document.querySelector('.player');
+const audio = player.querySelector('audio');
+const playBtn = player.querySelector('.play');
+const seek = player.querySelector('.seek');
+
+playBtn.addEventListener('click', () => {
+  audio.paused ? audio.play() : audio.pause();
+});
+
+audio.addEventListener('timeupdate', () => {
+  seek.value = (audio.currentTime / audio.duration) * 100;
+});
+
+seek.addEventListener('input', () => {
+  audio.currentTime = (seek.value / 100) * audio.duration;
+});
+
+</script>
                                                                
   </body>                                                                  
 </html>
