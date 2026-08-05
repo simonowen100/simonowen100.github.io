@@ -327,8 +327,6 @@ audio {
   width: 280px;
   padding: 20px;
   border-radius: 18px;
-  background: white;
-  color: #00ff41;
   font-family: "Courier New", monospace;
   border: 3px ridge #00ff41;
   box-shadow: 0 0 20px #00ff41;
@@ -344,18 +342,20 @@ audio {
   font-size: 40px;
   font-weight: bold;
   color:white;
+  font-family: Pixelify Sans;
 }
 
 #weather-widget .description {
   margin-top: 5px;
   font-size: 18px;
   text-transform: capitalize;
-  color:red;
+  color:lightskyblue;
+   font-family: Pixelify Sans;
 }
 
 .icon {
-  font-size: 40px;
-  margin-top: 10px;
+  margin-top: 5px;
+  width:50px;
 }
 
 
@@ -365,4 +365,5 @@ audio {
   display: flex;
   justify-content: space-between;
   color:white;
+   font-family: Pixelify Sans;
 }
