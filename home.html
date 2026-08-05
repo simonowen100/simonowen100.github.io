@@ -111,7 +111,9 @@ background-color: #eeeeee;
 <!--START OF CODE--> 
 <body>
   <img class="page-bg-container" src="https://img.itch.zone/aW1hZ2UvMTY1NDczNS85NzM1Nzg1LmdpZg==/original/LK07lW.gif">
- 
+ <img class="overlay" src="https://64.media.tumblr.com/7829711748f566733aaaa2bcf4146617/tumblr_mqthpvk8y81s5jjtzo1_500.gif">   
+<audio src="Audio/lego-star-wars-transition-sound.mp3" autoplay></audio>
+
    <br><br><br><br>  
   
   <div style='position:sticky; display:flex; column-gap: 30px; align-items: center; justify-content: center; margin: auto;'>
@@ -236,7 +238,7 @@ background-color: #eeeeee;
 <section class='red' style="color: white; border:solid 8px #0c3b32; background-color: #0c3b32; width: 600px; display: block; margin:0px auto; padding:0px 0px;"> 
   <section class='bar red'> <img style='margin:0px 15px; height: 50px' src='images/GIFs/Home/camera-flash.gif'>  <h2 style='color:white'>Picture of the day</h2>
   </section><br>
-  <img style=' border: 4px groove #00FF41; border-radius: 5px; width:100%' src="images/my-photos/water-droplets-1.jpeg"><br>
+  <a href='images/my-photos/water-droplets-1.jpeg'><img style=' border: 4px groove #00FF41; border-radius: 5px; width:100%' src="images/my-photos/water-droplets-1.jpeg"></a><br>
   <caption style='color:white; font-size: small; text-align: center; display:block; margin:0px auto; padding: 5px'> Water droplets on a plant in my parents' garden. Shot on iPhone SE 3rd gen (2022 model). Photo captured 4/08/2026 </caption><br>
     </section>
 
@@ -257,7 +259,11 @@ background-color: #eeeeee;
      <div> 
       
       <img style='width:100%'src='https://web.archive.org/web/20090725114531im_/http://www.geocities.com/affordableart1/best_viewed.gif'><br>
-     <img style='width:100%'src='images/GIFs/home/stormtrooper.gif'><br><br>
+      <button id="lego-btn" class="img-btn">
+  <img src="images/Home-Static/red-button.png" alt="button" />
+</button>
+<audio id="lego-audio" src="Audio/lego-yoda-death-slowed.mp3"></audio>
+      <img style='width:100%'src='images/GIFs/home/stormtrooper.gif'><br><br>
       <p style='background-image: url(images/PixelMatrixRain.gif)' class='update'> Site last updated <br> 5/08/2026 </p> </div>
       
      <p style='margin-bottom:15px; border-radius: 5px; font-size: small; line-height:0.8;font-weight: bold; font-family: courier; text-align: center; padding:3px; border: groove palevioletred 4px; padding-top:3px; color: white; background-color: e'><br> CURRENT VIBE<br><br><img style='width:100%' src='https://media.tenor.com/1I3KJAfgBN4AAAAM/subida.gif'></p>
@@ -353,6 +359,26 @@ background-color: #eeeeee;
   }
 
   loadWeather();
+</script>
+
+<script>
+  const btn = document.getElementById('lego-btn');
+  const audio = document.getElementById('lego-audio');
+
+  btn.addEventListener('click', () => {
+    audio.currentTime = 0;
+    audio.play();
+  });
+</script>
+
+<script>
+  const btn = document.getElementById('lego-btn');
+  const audio = document.getElementById('lego-audio');
+
+  btn.addEventListener('click', () => {
+    audio.currentTime = 0;
+    audio.play();
+  });
 </script>
 
 
