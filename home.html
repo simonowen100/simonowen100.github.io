@@ -175,8 +175,6 @@ background-color: #eeeeee;
       <br> <img style="scale: 1; width:100%" src="https://web.archive.org/web/20091027034516/http://www.geocities.com/seimomoney/starwars/des.gif">
       
        <img style="scale:.8; display: block; margin: 0 auto" src="https://web.archive.org/web/20091019205535im_/http://www.geocities.com/mamfa66/lavalamp.gif"><br>
-       <img style="width:100%; display: block; margin: 0 auto;" src="https://web.archive.org/web/20091027034436if_/http://www.geocities.com/seimomoney/starwars/shuttle.gif"><br>
-       <img style="width: 100%; scale:2; display: block; margin: 0 auto;"  src="https://web.archive.org/web/20091027034516if_/http://www.geocities.com/seimomoney/starwars/deathstar.gif"><br>
     </section>
   </div>  
   
@@ -235,11 +233,11 @@ background-color: #eeeeee;
         </section> 
   </div>
 <!--second section of 3-->                            
-<section class='red' style="color: white; border:solid 20px #0c3b32; background-color: #0c3b32; width: 600px; display: block; margin:0px auto; padding:0px 0px;"> 
+<section class='red' style="color: white; border:solid 8px #0c3b32; background-color: #0c3b32; width: 600px; display: block; margin:0px auto; padding:0px 0px;"> 
   <section class='bar red'> <img style='margin:0px 15px; height: 50px' src='images/GIFs/Home/camera-flash.gif'>  <h2 style='color:white'>Picture of the day</h2>
   </section><br>
   <img style=' border: 4px groove #00FF41; border-radius: 5px; width:100%' src="images/my-photos/water-droplets-1.jpeg"><br>
-  <caption style='color:white; font-size: small; text-align: center; display:block; margin:0px auto; padding: 5px'> Water droplets on a plant in my parents' garden. Shot on iPhone SE 3rd gen (2022 model). Photo captured 4/08/2026 </caption>
+  <caption style='color:white; font-size: small; text-align: center; display:block; margin:0px auto; padding: 5px'> Water droplets on a plant in my parents' garden. Shot on iPhone SE 3rd gen (2022 model). Photo captured 4/08/2026 </caption><br>
     </section>
 
     
@@ -281,8 +279,13 @@ background-color: #eeeeee;
 
 <br>      
 </div>
-     
        </div>
+<br>
+
+    <img style="width:100%; display: block; margin: 0 auto;" src="https://web.archive.org/web/20091027034436if_/http://www.geocities.com/seimomoney/starwars/shuttle.gif"><br>
+       <img style="width: 100%; scale:2; display: block; margin: 0 auto;"  src="https://web.archive.org/web/20091027034516if_/http://www.geocities.com/seimomoney/starwars/deathstar.gif"><br>
+   
+
     <img style="width:100%; border-radius: 200px; scale: 1;" src=""> 
       <img class='enlarge' style="display: block; margin: 0 auto;" src="">  
       <img style="width:100px;" src="">
@@ -311,7 +314,7 @@ background-color: #eeeeee;
 
 <script>
   const icons = {
-    "Thunderstorm": "⛈️",
+    "Thunderstorm": "<img src='images/GIFs/Home/storm.gif'>",
     "Drizzle": "🌦️", 
     "Rain": "<img src='images/GIFs/Home/rain.gif'>",
     "Snow": "❄️",
@@ -341,8 +344,8 @@ background-color: #eeeeee;
 
     document.querySelector(".temp").textContent = `${Math.round(data.main.temp)}°C`;
     document.querySelector(".description").textContent = data.weather[0].description;
-   document.querySelector(".humidity").innerHTML = `<img style='height:40px' src="images/GIFs/Home/droplet.gif" alt="Humidity"> ${data.main.humidity}%`;
-    document.querySelector(".wind").innerHTML = `<img style='height:40px' src="images/GIFs/Home/wind.gif">${Math.round(data.wind.speed)}km/h`;
+   document.querySelector(".humidity").innerHTML = `<img style='height:40px' src="images/GIFs/Home/droplet.gif" title="Humidity"> ${data.main.humidity}%`;
+    document.querySelector(".wind").innerHTML = `<img style='height:40px' src="images/GIFs/Home/wind.gif" title="Wind Speed">${Math.round(data.wind.speed)}km/h`;
 
     // Now this works
     document.querySelector(".icon").innerHTML = icons[weatherMain] || "❓";
