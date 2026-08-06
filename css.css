@@ -348,11 +348,11 @@ audio {
 }
 
 #weather-widget .temp {
-  font-size: 40px;
-  text-grow: per-line font-size; 
+  margin-bottom: 15px;
+  font-size: clamp(1cqi, 3vw, 40px);
   font-weight: bold;
   color:white;
-  font-family: Pixelify Sans;
+  font-family: 'Fusion Pixel 10px Proportional JP', monospace;
 }
 
 #weather-widget {
@@ -371,19 +371,19 @@ audio {
 
 #weather-widget .description {
   margin-top: 5px;
-  font-size:x-large;
+  font-size: clamp(100cqi);
   text-transform: capitalize;
   color:lightskyblue;
-   font-family: Pixelify Sans;
+   font-family: 'Fusion Pixel 10px Proportional JP', monospace;
 }
 
 #weather-widget .details {
   margin-top: 15px;
-  font-size: medium;
+  font-size: clamp(100cqi);
   display: flex;
   justify-content: space-between;
   color:white;
-   font-family: Pixelify Sans;
+   font-family: 'Fusion Pixel 10px Proportional JP', monospace;
 }
 
 

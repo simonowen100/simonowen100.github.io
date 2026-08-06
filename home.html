@@ -82,10 +82,10 @@ body {
     color: white;
     background: #1c1c1c;
     padding: 3px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 15px;
-    font-family: "Doto", sans-serif, serif, courier;
-    font-weight: 900;
+    font-family: 'Fusion Pixel 10px Proportional JP', 'Courier New', "Doto", sans-serif, serif, courier;
+    font-weight: ;
     border-radius: 5px;
   }
   
@@ -259,12 +259,16 @@ background-color: #eeeeee;
      <div> 
       
       <img style='width:100%'src='https://web.archive.org/web/20090725114531im_/http://www.geocities.com/affordableart1/best_viewed.gif'><br>
+    <div style='background-color:#1c1c1c; border:#00FF41 4px groove; border-radius: 5px; padding: 5px;'>
+      <p style="font-family:'Courier New', Courier, monospace; color:white"> Visitor count:</p>
+      <div align=left><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-37W836Z4w6DbxZzz-9.gif' border='0' alt='conter12'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=37W836Z4w6DbxZzz'></script></div>
+      </div>
       <button id="lego-btn" class="img-btn">
   <img src="images/Home-Static/red-button.png" alt="button" />
 </button>
 <audio id="lego-audio" src="Audio/lego-yoda-death-slowed.mp3"></audio>
       <img style='width:100%'src='images/GIFs/home/stormtrooper.gif'><br><br>
-      <p style='background-image: url(images/PixelMatrixRain.gif)' class='update'> Site last updated <br> 5/08/2026 </p> </div>
+      <p style='background-image: url(images/PixelMatrixRain.gif)' class='update'>Last updated: <br><span id="last-updated">Loading...</span> </p> </div>
       
      <p style='margin-bottom:15px; border-radius: 5px; font-size: small; line-height:0.8;font-weight: bold; font-family: courier; text-align: center; padding:3px; border: groove palevioletred 4px; padding-top:3px; color: white; background-color: e'><br> CURRENT VIBE<br><br><img style='width:100%' src='https://media.tenor.com/1I3KJAfgBN4AAAAM/subida.gif'></p>
          <div>
@@ -334,7 +338,7 @@ background-color: #eeeeee;
     "Squall": "🌬️",
     "Tornado": "🌪️",
     "Clear": "<img src='images/GIFs/Home/sun.gif'>",
-    "Clouds": "☁️"
+    "Clouds": "<img src='images/GIFs/Home/cloud.gif'>"
   };
 
   async function loadWeather() {
@@ -381,6 +385,23 @@ background-color: #eeeeee;
   });
 </script>
 
+<script>
+ window.addEventListener("DOMContentLoaded", () => {
+    const lastModifiedDate = new Date(document.lastModified);
+    
+    // Formats the date to dd/mm/yyyy and the time to 24-hour hh:mm
+    const formattedDateTime = lastModifiedDate.toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true // Set to true if you prefer 12-hour AM/PM format
+    });
+
+    document.getElementById("last-updated").textContent = formattedDateTime;
+  });
+</script>
 
 
   </body>                                                                  
