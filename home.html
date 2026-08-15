@@ -139,14 +139,14 @@ background-color: #eeeeee;
     <a style='display:flex; column-gap: 10px; align-items: center;' href="movies"><img class='top-menu-image' src='https://web.archive.org/web/20090830023206/http://geocities.com/Panty_did_cap/Immagini_home_varie/cinema_gif.gif'>  Movies</a>
      <a style='display:flex; column-gap: 10px; align-items: center;' href="screenwriting"><img class='top-menu-image' src='images/Menu/Typewriter.gif'> Screenwriting</a>
     <a style='display:flex; column-gap: 10px; align-items: center;' href="books"><img class='top-menu-image' src='https://web.archive.org/web/20090831012404if_/http://geocities.com/anatta_page/readbookfliplil.gif'> Books</a>
-     <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
+    <!-- <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090725221630/http://www.geocities.com/arech_mx/LittleTV.gif'> Television</a>
      <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020141126/http://geocities.com/HotSprings/Spa/2934/taoanim.gif'> Taoisms</a>
      <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20090820040827if_/http://www.geocities.com/musicscrapbook/rotatingJewstar.gif'> Judaisms</a>
      <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091020084047/http://www.geocities.com/pjadams49417/popcorneat.gif'> Snacks</a>
      <a style='color:grey; text-decoration: line-through; display:flex; column-gap: 10px; align-items: center;' href="#"><img class='top-menu-image' src='https://web.archive.org/web/20091027072429if_/http://geocities.com/portfolio23015/rotating_Earth.gif'> Travel</a>
-     </div>
+  --> </div>
      </div> </a>
-  <a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Asset Log </a> 
+  <!--<a style='color:grey; text-decoration: line-through;' href=""  class='top-button'> Asset Log </a> -->
    <a style='' href="lounge"  class='top-button'> Lounge </a> 
  <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-38212-d5"target="_blank"  class='top-button'> Guestbook </a>
  </div>
@@ -160,14 +160,25 @@ background-color: #eeeeee;
      
      <div id="weather-widget">
   <div class="location">Melbourne, Australia</div>
-  <div class="temp"></div>
+   <div class="temp"></div>
+  <span class="feelslike"></span>
+ <div class="minmax">
+    <span class="temp-min"></span>
+    <span class="temp-max"></span>
+  </div>
   <div class="icon"></div>
   <div class="description"></div>
   <div class="details">
+    <div class="sun-times">
+  <span class="sunrise"></span>
+  <span class="sunset"></span>
+</div>
   <span class="humidity"></span>
   <span class="wind"></span>
+  
   </div>
 </div>
+
 
 
 
@@ -192,8 +203,8 @@ background-color: #eeeeee;
         <div class='button-panel'>
           <a target="_blank" class='pulse'; title="view PDF portfolio" href="simon-portfolio.pdf"> <img style="padding: 2px" class="img-q-links" src="images/Menu/folder.png"> </a>
           <a target="_blank" class='pulse' title="shoot me an email" href="mailto:simonowen100@gmail.com"> <img style="padding: 3px" class="img-q-links" src="https://cdn-icons-png.freepik.com/512/12751/12751325.png"> </a>     
-          <a target="_blank" class='pulse' title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img class="img-q-links" src="https://64.media.tumblr.com/a013dd5e98b0558ece4f5b475b642d48/tumblr_nrfmy1U9Th1uathmoo1_640.png"> </a> 
-          <a target="_blank" class='pulse' title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img class="img-q-links" src="https://images.icon-icons.com/2873/PNG/512/linkedin_pixel_logo_icon_181925.png"></a> 
+          <a target="_blank" class='pulse' title="view my Insta" href="https://www.instagram.com/simonowen_/"> <img  style='padding: 4px' class="img-q-links" src="https://64.media.tumblr.com/a013dd5e98b0558ece4f5b475b642d48/tumblr_nrfmy1U9Th1uathmoo1_640.png"> </a> 
+          <a target="_blank" class='pulse' title="connect with me on linkedin" href="https://www.linkedin.com/in/simonowen100/"><img style='padding: 4px' class="img-q-links" src="https://images.icon-icons.com/2873/PNG/512/linkedin_pixel_logo_icon_181925.png"></a> 
           <a target="_blank" class='pulse' title="view my Flickr" href="https://www.flickr.com/photos/195084601@N05/"><img class="img-q-links" src="images/Menu/flickr.png"></a>      
              <a target="_blank" class='pulse' title="visit YouTube channel" href="https://www.youtube.com/@simon2322"><img class="img-q-links" style="padding: 4px; white-space: nowrap;" src="images/Menu/youtube.png"></a>
         </div>
@@ -323,50 +334,6 @@ background-color: #eeeeee;
      <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');</script>       
 
-🌧️
-
-<script>
-  const icons = {
-    "Thunderstorm": "<img src='images/GIFs/Home/storm.gif'>",
-    "Drizzle": "🌦️", 
-    "Rain": "<img src='images/GIFs/Home/rain.gif'>",
-    "Snow": "❄️",
-    "Mist": "🌫️",
-    "Smoke": "🌫️",
-    "Haze": "🌫️",
-    "Dust": "🌫️",
-    "Fog": "🌫️",
-    "Sand": "🌫️",
-    "Ash": "🌫️",
-    "Squall": "🌬️",
-    "Tornado": "🌪️",
-    "Clear": "<img src='images/GIFs/Home/sun.gif'>",
-    "Clouds": "<img src='images/GIFs/Home/cloud.gif'>"
-  };
-
-  async function loadWeather() {
-    const apiKey = "aa357134ac6eb4bb0656f4a5bee1d656";
-    const city = "Melbourne,AU";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
-    const response = await fetch(url);
-    const data = await response.json();
-
-    // ADD THIS — you forgot it
-    const weatherMain = data.weather[0].main;
-
-    document.querySelector(".temp").textContent = `${Math.round(data.main.temp)}°C`;
-    document.querySelector(".description").textContent = data.weather[0].description;
-   document.querySelector(".humidity").innerHTML = `<img style='height:40px' src="images/GIFs/Home/droplet.gif" title="Humidity"> ${data.main.humidity}%`;
-    document.querySelector(".wind").innerHTML = `<img style='height:40px' src="images/GIFs/Home/wind.gif" title="Wind Speed">${Math.round(data.wind.speed)}km/h`;
-
-    // Now this works
-    document.querySelector(".icon").innerHTML = icons[weatherMain] || "❓";
-
-  }
-
-  loadWeather();
-</script>
 
 <script>
   const btn = document.getElementById('lego-btn');
@@ -406,6 +373,118 @@ background-color: #eeeeee;
   });
 </script>
 
+<script>
+
+ const icons = {
+  "Thunderstorm": "<img src='images/GIFs/Home/storm.gif'>",
+  "Drizzle": "🌦️",
+  "Rain": "<img src='images/GIFs/Home/rain.gif'>",
+  "Snow": "❄️",
+  "Mist": "🌫️",
+  "Smoke": "🌫️",
+  "Haze": "🌫️",
+  "Dust": "🌫️",
+  "Fog": "🌫️",
+  "Sand": "🌫️",
+  "Ash": "🌫️",
+  "Squall": "🌬️",
+  "Tornado": "🌪️",
+  "Clear": "<img src='images/GIFs/Home/sun.gif'>",
+  "Clouds": "<img src='images/GIFs/Home/cloud.gif'>"
+};
+
+function mapWeatherCodeToLabel(code) {
+  if (code === 0 || code === 1) return "Clear";
+  if (code === 2 || code === 3) return "Clouds";
+  if ([45, 48].includes(code)) return "Fog";
+  if ([51, 53, 55].includes(code)) return "Drizzle";
+  if ([61, 63, 65, 80, 81, 82].includes(code)) return "Rain";
+  if ([71, 73, 75].includes(code)) return "Snow";
+  if ([95, 96, 99].includes(code)) return "Thunderstorm";
+  return "Clear";
+}
+
+async function loadWeather() {
+  const lat = -37.81;
+  const lon = 144.96;
+
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=relative_humidity_2m&daily=temperature_2m_min,temperature_2m_max,sunrise,sunset&timezone=auto&forecast_days=1`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  const current = data.current_weather;
+  const daily = data.daily;
+
+  document.querySelector(".temp").textContent =
+    `${Math.round(current.temperature)}°C`;
+
+  document.querySelector(".feelslike").textContent =
+    `Feels like: ${Math.round(current.temperature)}°C`;
+
+  const min = daily.temperature_2m_min[0];
+  const max = daily.temperature_2m_max[0];
+
+  document.querySelector(".temp-min").textContent = `Min: ${Math.round(min)}°C`;
+  document.querySelector(".temp-max").textContent = `Max: ${Math.round(max)}°C`;
+
+  document.querySelector(".wind").innerHTML =
+    `<img style='height:20px' src="images/GIFs/Home/wind.gif" title="Wind Speed"> ${Math.round(current.windspeed)} km/h`;
+
+  document.querySelector(".humidity").innerHTML =
+    `<img style='height:20px' src="images/GIFs/Home/droplet.gif" title="Humidity"> ${data.hourly.relative_humidity_2m[0]}%`;
+
+  document.querySelector(".sunrise").innerHTML =
+    `<img src='images/GIFs/Home/sun2.gif'>
+    Sunrise: ${new Date(daily.sunrise[0]).toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit'
+    })}`;
+
+  document.querySelector(".sunset").innerHTML =
+    `<img src='images/GIFs/Home/moon.gif'>
+    Sunset: ${new Date(daily.sunset[0]).toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit'
+    })}`;
+
+  const weatherCode = current.weathercode;
+
+  const descriptions = {
+    0: "Clear sky",
+    1: "Mainly clear",
+    2: "Partly cloudy",
+    3: "Overcast",
+    45: "Fog",
+    48: "Depositing rime fog",
+    51: "Light drizzle",
+    53: "Moderate drizzle",
+    55: "Dense drizzle",
+    61: "Slight rain",
+    63: "Moderate rain",
+    65: "Heavy rain",
+    71: "Slight snow",
+    73: "Moderate snow",
+    75: "Heavy snow",
+    80: "Rain showers",
+    81: "Rain showers",
+    82: "Violent rain showers",
+    95: "Thunderstorm",
+    96: "Thunderstorm with slight hail",
+    99: "Thunderstorm with heavy hail"
+  };
+
+  document.querySelector(".description").textContent =
+    descriptions[weatherCode] || `Code ${weatherCode}`;
+
+  const weatherLabel = mapWeatherCodeToLabel(weatherCode);
+  document.querySelector(".icon").innerHTML =
+    icons[weatherLabel] || "❓";
+}
+
+loadWeather();
+
+</script>
 
   </body>                                                                  
 </html>

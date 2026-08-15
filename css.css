@@ -347,6 +347,24 @@ audio {
   font-family: Pixelify Sans;
 }
 
+#weather-widget .feelslike {
+  line-height: 1.1;
+  font-size: auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:white;
+  font-family: Pixelify Sans;
+}
+
+#weather-widget .minmax {
+  line-height: 1.1;
+  font-size: auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:white;
+  font-family: Pixelify Sans;
+}
+
 #weather-widget .temp {
   margin-bottom: 15px;
   font-size: clamp(1cqi, 3vw, 40px);
@@ -371,9 +389,10 @@ audio {
 
 #weather-widget .description {
   margin-top: 5px;
-  font-size: clamp(100cqi);
+  font-size: clamp(150cqi);
   text-transform: capitalize;
   color:lightskyblue;
+  font-weight:bold;
    font-family: 'Fusion Pixel 10px Proportional JP', monospace;
 }
 
@@ -381,11 +400,19 @@ audio {
   margin-top: 15px;
   font-size: clamp(100cqi);
   display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   justify-content: space-between;
   color:white;
    font-family: 'Fusion Pixel 10px Proportional JP', monospace;
 }
 
+
+.sun-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 
   .img-btn {
     background: none;
