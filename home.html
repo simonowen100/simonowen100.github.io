@@ -100,32 +100,43 @@ body-copy-2 {
 }
 
 .button-panel {
-background-color: #eeeeee;
+display: flex;
+flex-direction: column;
+  background-color: #eeeeee;
   border-radius: 5px;
   padding:2px;
   width:auto;
+  max-width:50px;
+
 }
+
+@media (max-width: 600px) {
+    .button-panel {
+      flex-direction: row;
+      max-width: fit-content;
+      max-height: fit-content;
+    }
+  }
+
 
 </style>
   
 <!--START OF CODE--> 
-<body>
+<body style='max-width:100%'>
   <img class="page-bg-container" src="https://img.itch.zone/aW1hZ2UvMTY1NDczNS85NzM1Nzg1LmdpZg==/original/LK07lW.gif">
  <img class="overlay" src="https://64.media.tumblr.com/7829711748f566733aaaa2bcf4146617/tumblr_mqthpvk8y81s5jjtzo1_500.gif">   
 <audio src="Audio/lego-star-wars-transition-sound.mp3" autoplay></audio>
 
    <br><br><br><br>  
+    <img style='position: relative; left:100px; top:30px' src="https://blob.gifcities.org/gifcities/MQ3FQPY2Y26I25M6BD3XQKREYF3OD5LM.gif"><br>
+  <div style='max-width:90vw; position:sticky; display:flex; column-gap: 20px; align-items: center; justify-content: center; margin: auto;'>
   
-  <div style='position:sticky; display:flex; column-gap: 30px; align-items: center; justify-content: center; margin: auto;'>
-    <div><img style='max-height: 100px' src='images/my-photos/Monogram.gif'>
-    </div>
-  <div>
-  <section style='position: relative; right:200px; text-align:center'> <img src="https://blob.gifcities.org/gifcities/MQ3FQPY2Y26I25M6BD3XQKREYF3OD5LM.gif"> </section>
+    <img style='max-height: 120px' src='images/my-photos/Monogram.gif'>
   
- <section style="text-align: center; margin-top: 0px;"> <img style='width: 600px' src='images/Futura_Banner.png'> 
+  
+ <section style="text-align: center; margin-top: 0px;"> <img style='max-height: 100px' src='images/Futura_Banner.png'> 
   </section> 
   <br>
-  </div>
   </div>
   
  <div style="display:flex; text-align: center;" class='top-menu'>
@@ -155,50 +166,46 @@ background-color: #eeeeee;
   
 
 <!--1-->
-  <div class="red" style="margin: 0px 10px; max-width:100px; min-width:100px">
-     <section>
+  <div class="red" style="margin: 0px 10px;">
+  
      
      <div id="weather-widget">
   <div class="location">Melbourne, Australia</div>
    <div class="temp"></div>
-  <span class="feelslike"></span>
+  <div class="feelslike"></div>
  <div class="minmax">
-    <span class="temp-min"></span>
-    <span class="temp-max"></span>
+    <div class="temp-min"></div>
+    <div class="temp-max"></div>
   </div>
   <div class="icon"></div>
   <div class="description"></div>
-  <div class="details">
-    <div class="sun-times">
-  <span class="sunrise"></span>
-  <span class="sunset"></span>
+  <div class="details"></div>
+  <div class="sunrise sun-times"></div>
+  <div class="sunset sun-times"></div>
+  <div class="humidity"></div>
+  <div class="wind"></div>
+
 </div>
-  <span class="humidity"></span>
-  <span class="wind"></span>
-  
-  </div>
-</div>
+</div> 
 
-
-
+<div class="flex-test">
 
 <!-- // Begin Current Moon Phase HTML (c) MoonConnection.com // --><table cellpadding="0" cellspacing="0" width="0"><tr><td><a href="https://www.moonconnection.com" target="mc_moon_ph"><img style='max-width: 100%; height: auto;' src="https://www.moonmodule.com/cs/dm/vs.gif" alt="" /></a><div style="position:relative;width:100%;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:;text-align:center;"><a href="https://www.moonconnection.com/" target="mc_moon_ph"></a></div></div></td></tr></table><!-- // end moon phase HTML // -->
      
 
-       <img style="width:100%; border-radius: 150px;" src="https://media.tenor.com/gSfs7xmRUXcAAAAM/death-star-spin.gif"> <br>
+       <img style="max-width:100%; border-radius: 150px;" src="https://media.tenor.com/gSfs7xmRUXcAAAAM/death-star-spin.gif"> <br>
    
 
-      <br> <img style="scale: 1; width:100%" src="https://web.archive.org/web/20091027034516/http://www.geocities.com/seimomoney/starwars/des.gif">
+      <br><img style='max-width: 100%;' src="https://web.archive.org/web/20091027034516/http://www.geocities.com/seimomoney/starwars/des.gif">
       
        <img style="scale:.8; display: block; margin: 0 auto" src="https://web.archive.org/web/20091019205535im_/http://www.geocities.com/mamfa66/lavalamp.gif"><br>
-    </section>
-  </div>  
+</div>
+   
   
 <!--2-->
-  <div class="red" style="max-width: 50px; margin: 0px 20px 0px 15px;">
+  <div class="red" style="margin: 0px 20px 0px 15px;">
      <section style= "padding:0px 0px 15px 0px; z-index=10;">
       
-           
   
         <div class='button-panel'>
           <a target="_blank" class='pulse'; title="view PDF portfolio" href="simon-portfolio.pdf"> <img style="padding: 2px" class="img-q-links" src="images/Menu/folder.png"> </a>
@@ -221,8 +228,7 @@ background-color: #eeeeee;
   
 <!--3-->
  <div class="red">
- <div style='width: 600px; background-color: #1D8974;
-  ' class="red">
+ <div style='background-color: #1D8974;' class="red">
 
 <div style="height: 40px;" id="scroll-container">
   <div id="scroll-track">
@@ -249,16 +255,16 @@ background-color: #eeeeee;
         </section> 
   </div>
 <!--second section of 3-->                            
-<section class='red' style="color: white; border:solid 8px #0c3b32; background-color: #0c3b32; width: 600px; display: block; margin:0px auto; padding:0px 0px;"> 
+<section class='red' style="color: white; border:solid 8px #0c3b32; background-color: #0c3b32; width: auto; display: block; margin:0px auto; padding:0px 0px;"> 
   <section class='bar red'> <img style='margin:0px 15px; height: 50px' src='images/GIFs/Home/camera-flash.gif'>  <h2 style='color:white'>Picture of the day</h2>
   </section><br>
-  <a href='images/my-photos/water-droplets-1.jpeg'><img style=' border: 4px groove #00FF41; border-radius: 5px; width:100%' src="images/my-photos/water-droplets-1.jpeg"></a><br>
+  <a href='images/my-photos/water-droplets-1.jpeg'><img style=' border: 4px groove #00FF41; border-radius: 5px; max-width:100%' src="images/my-photos/water-droplets-1.jpeg"></a><br>
   <caption style='color:white; font-size: small; text-align: center; display:block; margin:0px auto; padding: 5px'> Water droplets on a plant in my parents' garden. Shot on iPhone SE 3rd gen (2022 model). Photo captured 4/08/2026 </caption><br>
     </section>
 
     
     <div>
-    <img style='width:600px' src="images/Parker.png">
+    <img style='max-width:100%' src="images/Parker.png">
   </div>
 
   </div>
